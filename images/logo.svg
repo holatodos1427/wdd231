@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60" role="img" aria-label="Site logo">
+  <rect width="60" height="60" rx="10" fill="#1e3a5f"/>
+  <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+        font-family="'Outfit', sans-serif" font-weight="700"
+        font-size="18" fill="#e8a020" letter-spacing="0">W</text>
+</svg>

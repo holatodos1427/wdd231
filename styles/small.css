@@ -1,0 +1,331 @@
+
+:root {
+  --color-primary:    #1e3a5f;
+  --color-accent:     #e8a020;
+  --color-accent-dim: #c4841a;
+  --color-bg:         #f4f1eb;
+  --color-surface:    #ffffff;
+  --color-section-hd: #1e3a5f;
+  --color-text:       #2d2d2d;
+  --color-text-light: #5a5a5a;
+  --color-nav-bg:     #1e3a5f;
+  --color-nav-hover:  #e8a020;
+  --color-border:     #ddd8ce;
+  --color-complete:   #1a7a4a;
+  --color-complete-bg:#d4f0e4;
+  --color-incomplete: #5a5a5a;
+  --color-incomplete-bg: #ede9e1;
+
+  --font-body:    'Outfit', sans-serif;
+  --font-heading: 'Playfair Display', serif;
+
+  --radius:  8px;
+  --shadow:  0 2px 12px rgba(30, 58, 95, 0.10);
+  --gap:     1.25rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Header --- */
+header {
+  background-color: var(--color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.site-logo {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
+
+.site-name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+.hamburger {
+  background: none;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.hamburger:hover,
+.hamburger:focus-visible {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  outline: none;
+}
+
+
+#main-nav {
+  background-color: var(--color-nav-bg);
+  display: none;
+}
+
+#main-nav.open {
+  display: block;
+}
+
+#main-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+#main-nav ul li a {
+  display: block;
+  padding: 0.85rem 1.5rem;
+  color: #e0e0e0;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  border-left: 4px solid transparent;
+  transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+}
+
+#main-nav ul li a:hover,
+#main-nav ul li a:focus-visible {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  background-color: rgba(232, 160, 32, 0.08);
+  outline: none;
+}
+
+#main-nav ul li a.active {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  font-weight: 700;
+}
+
+main {
+  padding: 1.5rem 1.25rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+main h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid var(--color-accent);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+.main-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin-bottom: var(--gap);
+}
+
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card h2 {
+  background-color: var(--color-section-hd);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+}
+
+#about p {
+  padding: 1rem 1.25rem;
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.25rem;
+  background-color: var(--color-bg);
+}
+
+.student-photo {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 3px solid var(--color-border);
+  background-color: #ccc;
+}
+
+#courses {
+  margin-top: 0;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.6rem;
+  padding: 1rem 1.25rem 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.filter-btn:hover,
+.filter-btn:focus-visible {
+  border-color: var(--color-accent);
+  background-color: rgba(232, 160, 32, 0.12);
+  outline: none;
+}
+
+.filter-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 1.25rem 0.75rem;
+}
+
+.course-card {
+  padding: 0.55rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.02em;
+  border: 2px solid transparent;
+  transition: transform 0.15s;
+}
+
+.course-card:hover {
+  transform: translateY(-1px);
+}
+
+.course-card.completed {
+  background-color: var(--color-complete-bg);
+  color: var(--color-complete);
+  border-color: #a8dfc3;
+}
+
+.course-card.incomplete {
+  background-color: var(--color-incomplete-bg);
+  color: var(--color-incomplete);
+  border-color: var(--color-border);
+}
+
+.credits-total {
+  padding: 0.6rem 1.25rem 1rem;
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  font-style: Cascadia Mono, monospace;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--color-primary);
+  color: #e0e0e0;
+  text-align: center;
+  padding: 1.5rem 1.25rem 1rem;
+  margin-top: 2rem;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  border-radius: 6px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  opacity: 0.8;
+  transform: translateY(-2px);
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.footer-info {
+  font-size: 0.875rem;
+  margin-bottom: 0.35rem;
+  color: #c8c8c8;
+}
+
+.footer-modified {
+  font-size: 0.8rem;
+  color: #9a9a9a;
+}

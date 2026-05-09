@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 231 Frontend Web Development — student homepage for the Web and Computer Programming certificate." />
+  <meta name="author" content="David Cambeiro" />
+  <title>WDD 231 | Home | David Cambeiro</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <div class="header-brand">
+      <img src="images/dacode.webp" alt="WDD 231 logo" class="site-logo" width="50" height="50" />
+      
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      ☰
+    </button>
+  </header>
+
+  <nav id="main-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chamber/index.html">Chamber Project</a></li>
+      <li><a href="final/index.html">Final Project</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <div class="main-grid">
+
+      <section class="card" id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm David Cambeiro from Arequipa, Peru, an aspiring software developer. I'm passionate about building useful tools that simplify life and I enjoy working with data. My focus is on creating interactive, clean, and responsive designs, with the goal of specializing in UX/UI development.
+        </p>
+      </section>
+      <section class="card" id="photo">
+        <h2>Student Photo</h2>
+        <div class="photo-wrapper">
+          <img
+            src="images/my_face.webp"
+            alt="A photo of me"
+            class="student-photo"
+            width="300"
+            height="300"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+    </div>
+
+    <section class="card" id="courses">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="CSE">CSE</button>
+        <button class="filter-btn" data-filter="WDD">WDD</button>
+      </div>
+
+      <div id="course-list" class="course-list">
+      </div>
+
+      <p class="credits-total" id="credits-total"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-social">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/marcos-cambeiro-2b88231a7/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+        <img src="images/linkedin-svgrepo-com (1).svg" alt="linkedlogo" width="32" height="32" />
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/holatodos1427" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+        <img src="images/github-142-svgrepo-com.svg" alt="githublogo" width="32" height="32" />
+      </a>
+      <!-- X / Twitter -->
+      <a href="https://x.com/DavidCambeiro2" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter) profile">
+        <img src="images/x.svg" alt="xlogo" width="32" height="32" />
+      </a>
+    </div>
+
+    <p class="footer-info">
+      <span id="copyright-year"></span> • David Cambeiro • Arequipa, Peru
+    </p>
+
+    <p id="lastModified" class="footer-modified"></p>
+  </footer>
+
+</body>
+</html>

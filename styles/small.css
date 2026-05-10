@@ -107,6 +107,7 @@ header {
 #main-nav {
   background-color: var(--color-nav-bg);
   display: none;
+  color: #e0e0e0;
 }
 
 #main-nav.open {
@@ -286,7 +287,7 @@ main h1 {
   padding: 0.6rem 1.25rem 1rem;
   font-size: 0.875rem;
   color: var(--color-text-light);
-  font-style: Cascadia Mono, monospace;
+  font-style: var(--font-body);
   text-align: center;
 }
 

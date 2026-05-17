@@ -1,0 +1,85 @@
+{
+  "members": [
+    {
+      "name": "Turismo Colca Valley",
+      "address": "Calle Mercaderes 415, Arequipa 04001",
+      "phone": "(054) 221-834",
+      "website": "https://www.colcavalley.com",
+      "image": "valle-del-colca.webp",
+      "level": 3,
+      "description": "Premier tour operator for Colca Canyon adventures and cultural experiences."
+    },
+    {
+      "name": "Restaurante La Nueva Palomino",
+      "address": "Leoncio Prado 122, Yanahuara, Arequipa",
+      "phone": "(054) 252-393",
+      "website": "https://www.lanuevapalmino.com",
+      "image": "NuevaPalomino.webp",
+      "level": 3,
+      "description": "Iconic picantera serving authentic Arequipeña cuisine since 1990."
+    },
+    {
+      "name": "Sillar Construcciones",
+      "address": "Av. Ejército 308, Arequipa 04001",
+      "phone": "(054) 273-456",
+      "website": "https://www.sillarconstrucciones.pe",
+      "image": "canteras-sillar-anashuayco-arequipa-full.webp",
+      "level": 2,
+      "description": "Specialists in traditional sillar volcanic stone architecture and restoration."
+    },
+    {
+      "name": "Misti Café & Bakery",
+      "address": "Portal de Flores 116, Plaza de Armas, Arequipa",
+      "phone": "(054) 205-771",
+      "website": "https://www.misticafe.pe",
+      "image": "misti-bakery-and-cafe.webp",
+      "level": 2,
+      "description": "Artisan bakery and specialty coffee roaster in the historic city center."
+    },
+    {
+      "name": "Alpaca Textiles Arequipa",
+      "address": "Calle Zela 212, Arequipa 04001",
+      "phone": "(054) 288-610",
+      "website": "https://www.alpacatextiles.pe",
+      "image": "AlpacaTextiles.webp",
+      "level": 3,
+      "description": "Premium baby alpaca and vicuña fiber textiles exported worldwide."
+    },
+    {
+      "name": "Clínica San Pablo Arequipa",
+      "address": "Av. Bolognesi 230, Arequipa 04001",
+      "phone": "(054) 253-416",
+      "website": "https://www.sanpablo.com.pe",
+      "image": "ClinicaSanPablo.webp",
+      "level": 2,
+      "description": "Full-service private health clinic with 24-hour emergency care."
+    },
+    {
+      "name": "Bodega Tabernero Sur",
+      "address": "Av. La Marina 700, Cerro Colorado, Arequipa",
+      "phone": "(054) 445-201",
+      "website": "https://www.tabernero.com",
+      "image": "Tabernero.webp",
+      "level": 1,
+      "description": "Award-winning winery and pisco producer serving southern Peru."
+    },
+    {
+      "name": "Instituto Confucio UNSA",
+      "address": "Calle Santa Catalina 117, Arequipa 04001",
+      "phone": "(054) 204-050",
+      "website": "https://www.unsa.edu.pe",
+      "image": "Instituto-Confucio-Unsa.webp",
+      "level": 1,
+      "description": "Language and cultural education center at Universidad Nacional de San Agustín."
+    },
+    {
+      "name": "Chachani Agro Export",
+      "address": "Parque Industrial, Río Seco, Arequipa",
+      "phone": "(054) 436-788",
+      "website": "https://www.chachaniagroexport.pe",
+      "image": "ChachaniAgro.webp",
+      "level": 1,
+      "description": "Exporter of Peruvian superfoods: quinoa, kiwicha, and organic tara."
+    }
+  ]
+}

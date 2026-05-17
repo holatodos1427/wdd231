@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arequipa Chamber of Commerce — Business Directory. Discover local member businesses in La Ciudad Blanca, Peru." />
+  <meta name="author" content="WDD 231 Student — Arequipa Chamber Project" />
+  <title>Business Directory | Arequipa Chamber of Commerce</title>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+
+  <meta property="og:title"       content="Business Directory | Arequipa Chamber of Commerce" />
+  <meta property="og:description" content="Explore local businesses and chamber members in Arequipa, Peru — La Ciudad Blanca." />
+  <meta property="og:image"       content="images/canteras-sillar-anashuayco-arequipa-full.webp" />
+  <meta property="og:url"         content="https://yourusername.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:type"        content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+
+  <a href="#directory-section" class="skip-link">Skip to directory</a>
+
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-group" aria-label="Arequipa Chamber — Home">
+        <img class="logo-icon" src="images/ArequipaIcon.webp" alt="Arequipa Chamber Icon" />
+        <div class="logo-text">
+          <span class="logo-title">Arequipa Chamber</span>
+          <span class="logo-sub">of Commerce</span>
+        </div>
+      </a>
+    
+
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html" aria-current="page">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <section id="directory-hero" aria-label="Directory page hero">
+    <p class="hero-label">La Ciudad Blanca · Peru</p>
+    <h1>Business Directory</h1>
+    <p>Discover and connect with proud member businesses of the Arequipa Chamber of Commerce.</p>
+  </section>
+
+  <main id="directory-section" aria-label="Member business directory">
+    <div class="directory-controls">
+      <h2 class="controls-label">Our Members</h2>
+      <div class="view-buttons" role="group" aria-label="Toggle view layout">
+        <button id="btn-grid" class="btn-view active" aria-label="Grid view" title="Grid view">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm10 0h8v8h-8z"/>
+          </svg>
+        </button>
+        <button id="btn-list" class="btn-view" aria-label="List view" title="List view">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 5h2v2H3zm4 0h14v2H7zM3 9h2v2H3zm4 0h14v2H7zm-4 4h2v2H3zm4 0h14v2H7zm-4 4h2v2H3zm4 0h14v2H7z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="members-container" class="grid" aria-live="polite" aria-atomic="true"></div>
+  </main>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-group" style="pointer-events:none;">
+          <div class="logo-icon">AC</div>
+          <div class="logo-text">
+            <span class="logo-title">Arequipa Chamber</span>
+            <span class="logo-sub">of Commerce</span>
+          </div>
+        </div>
+        <p>Supporting local business and community growth in La Ciudad Blanca since 1897.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Portal de Flores 130<br />
+          Arequipa 04001, Peru<br />
+          <a href="tel:+51542001234">(054) 200-1234</a><br />
+          <a href="mailto:info@arequipachamber.pe">info@arequipachamber.pe</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <address>
+          <a href="index.html">Home</a><br />
+          <a href="directory.html">Directory</a><br />
+          <a href="discover.html">Discover Arequipa</a><br />
+          <a href="join.html">Join the Chamber</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="current-year"></span> Arequipa Chamber of Commerce</span>
+      <span>David Cambeiro | WDD 231</span>
+      <span id="last-modified"></span>
+    </div>
+  </footer>
+
+</body>
+</html>

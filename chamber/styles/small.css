@@ -6,7 +6,7 @@
   --clr-mid:         #4A2515;
   --clr-surface:     #FAF6EF;
   --clr-surface-2:   #F0E8D8;
-  --clr-surface-3:   #F0DED0;
+  --clr-surface-dim: #CEC8BF;
   --clr-border:      #D9C8A8;
   --clr-text:        #2C1810;
   --clr-text-muted:  #7A5A45;
@@ -207,14 +207,13 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--clr-surface);
-  opacity: 0.7;
+  color: var(--clr-accent-lt);
   margin-bottom: var(--sp-sm);
 }
 
 .hero-subtitle {
   font-size: 0.95rem;
-  opacity: 0.85;
+  color: var(--clr-surface-dim);
   max-width: 480px;
   margin: 0 auto;
 }

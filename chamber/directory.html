@@ -15,7 +15,7 @@
 
   <meta property="og:title"       content="Business Directory | Arequipa Chamber of Commerce" />
   <meta property="og:description" content="Explore local businesses and chamber members in Arequipa, Peru — La Ciudad Blanca." />
-  <meta property="og:image"       content="images/canteras-sillar-anashuayco-arequipa-full.webp" />
+  <meta property="og:image"       content="https://davidcambeiro.github.io/wdd231/chamber/images/canteras-sillar-anashuayco-arequipa-full.webp" />
   <meta property="og:url"         content="https://yourusername.github.io/wdd231/chamber/directory.html" />
   <meta property="og:type"        content="website" />
 
@@ -62,13 +62,13 @@
     </div>
   </header>
 
-  <section id="directory-hero" aria-label="Directory page hero">
+  <div id="directory-hero" aria-label="Directory page hero">
     <p class="hero-label">La Ciudad Blanca · Peru</p>
-    <h1>Business Directory</h1>
-    <p>Discover and connect with proud member businesses of the Arequipa Chamber of Commerce.</p>
-  </section>
+    <p class="hero-subtitle">Discover and connect with proud member businesses of the Arequipa Chamber of Commerce.</p>
+  </div>
 
   <main id="directory-section" aria-label="Member business directory">
+    <h1 class="page-title">Business Directory</h1>
     <div class="directory-controls">
       <h2 class="controls-label">Our Members</h2>
       <div class="view-buttons" role="group" aria-label="Toggle view layout">
@@ -90,10 +90,8 @@
   <footer id="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo-group" style="pointer-events:none;">
-          <div class="logo-icon">
-            <img class="logo-icon" src="images/arequipaicon.webp" alt="Arequipa Chamber Icon" />
-          </div>
+        <div class="logo-group footer-logo-group">
+          <img class="logo-icon" src="images/arequipaicon.webp" alt="" aria-hidden="true" />
           <div class="logo-text">
             <span class="logo-title">Arequipa Chamber</span>
             <span class="logo-sub">of Commerce</span>

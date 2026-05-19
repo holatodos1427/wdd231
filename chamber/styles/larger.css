@@ -32,6 +32,7 @@
   #directory-hero { padding: 4rem var(--sp-xl); }
   #directory-hero h1 { font-size: 2.4rem; }
   #directory-hero p  { font-size: 1rem; }
+  .page-title { font-size: 2rem; }
 
   #members-container.grid {
     grid-template-columns: repeat(2, 1fr);
@@ -57,6 +58,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
   #directory-hero h1 { font-size: 2.8rem; }
+  .page-title { font-size: 2.2rem; }
   .controls-label { font-size: 1.5rem; }
   .member-row { padding: var(--sp-md) var(--sp-lg); }
 }

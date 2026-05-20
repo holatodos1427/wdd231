@@ -1,7 +1,7 @@
 :root {
   --clr-primary:#8B1A1A;
-  --clr-accent:#C4622D;
-  --clr-accent-lt:#D4855A;
+  --clr-accent:#fbe8dd;
+  --clr-accent-lt:#ffe3d4;
   --clr-dark: #1E0F0A;
   --clr-mid: #4A2515;
   --clr-surface: #FAF6EF;
@@ -214,13 +214,13 @@ body {
   font-size: 2rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--clr-accent-lt);
+  color: var(--clr-white);
   margin-bottom: var(--sp-sm);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: var(--clr-surface-dim);
+  color: var(--clr-white);
   max-width: 480px;
   margin: 0 auto;
 }

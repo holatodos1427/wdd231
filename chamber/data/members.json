@@ -6,7 +6,6 @@
       "phone": "(054) 221-834",
       "website": "https://www.colcavalley.com",
       "image": "valle-del-colca.webp",
-      "level": 3,
       "description": "Premier tour operator for Colca Canyon adventures and cultural experiences."
     },
     {
@@ -15,7 +14,6 @@
       "phone": "(054) 252-393",
       "website": "https://www.lanuevapalmino.com",
       "image": "NuevaPalomino.webp",
-      "level": 3,
       "description": "Iconic picantera serving authentic Arequipeña cuisine since 1990."
     },
     {
@@ -24,7 +22,6 @@
       "phone": "(054) 273-456",
       "website": "https://www.sillarconstrucciones.pe",
       "image": "canteras-sillar-anashuayco-arequipa-full.webp",
-      "level": 2,
       "description": "Specialists in traditional sillar volcanic stone architecture and restoration."
     },
     {
@@ -33,7 +30,6 @@
       "phone": "(054) 205-771",
       "website": "https://www.misticafe.pe",
       "image": "misti-bakery-and-cafe.webp",
-      "level": 2,
       "description": "Artisan bakery and specialty coffee roaster in the historic city center."
     },
     {
@@ -42,7 +38,6 @@
       "phone": "(054) 288-610",
       "website": "https://www.alpacatextiles.pe",
       "image": "AlpacaTextiles.webp",
-      "level": 3,
       "description": "Premium baby alpaca and vicuña fiber textiles exported worldwide."
     },
     {
@@ -51,7 +46,6 @@
       "phone": "(054) 253-416",
       "website": "https://www.sanpablo.com.pe",
       "image": "ClinicaSanPablo.webp",
-      "level": 2,
       "description": "Full-service private health clinic with 24-hour emergency care."
     },
     {
@@ -60,7 +54,6 @@
       "phone": "(054) 445-201",
       "website": "https://www.tabernero.com",
       "image": "Tabernero.webp",
-      "level": 1,
       "description": "Award-winning winery and pisco producer serving southern Peru."
     },
     {
@@ -69,7 +62,6 @@
       "phone": "(054) 204-050",
       "website": "https://www.unsa.edu.pe",
       "image": "Instituto-Confucio-Unsa.webp",
-      "level": 1,
       "description": "Language and cultural education center at Universidad Nacional de San Agustín."
     },
     {
@@ -78,7 +70,6 @@
       "phone": "(054) 436-788",
       "website": "https://www.chachaniagroexport.pe",
       "image": "ChachaniAgro.webp",
-      "level": 1,
       "description": "Exporter of Peruvian superfoods: quinoa, kiwicha, and organic tara."
     }
   ]

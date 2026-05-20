@@ -11,8 +11,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-body  { min-height: 100vh; }
-main  { display: block; }
+body { min-height: 100vh; }
+main { display: block; }
 
 h1 {
   font-size: 2em;
@@ -30,9 +30,9 @@ pre, code, kbd, samp {
   font-size: 1em;
 }
 
-a            { background-color: transparent; }
-b, strong    { font-weight: bolder; }
-small        { font-size: 80%; }
+a { background-color: transparent; }
+b, strong { font-weight: bolder; }
+small { font-size: 80%; }
 
 abbr[title] {
   border-bottom: none;
@@ -61,8 +61,8 @@ button, input, optgroup, select, textarea {
   margin: 0;
 }
 
-button, input    { overflow: visible; }
-button, select   { text-transform: none; }
+button, input { overflow: visible; }
+button, select { text-transform: none; }
 
 button,
 [type="button"],
@@ -81,8 +81,8 @@ legend {
   white-space: normal;
 }
 
-progress  { vertical-align: baseline; }
-textarea  { overflow: auto; }
+progress { vertical-align: baseline; }
+textarea { overflow: auto; }
 
 [type="checkbox"],
 [type="radio"] {
@@ -95,10 +95,18 @@ textarea  { overflow: auto; }
   height: auto;
 }
 
-details   { display: block; }
-summary   { display: list-item; }
+details { 
+  display: block; 
+}
+summary { 
+  display: list-item; 
+}
 
 template,
-[hidden]  { display: none; }
+[hidden] { 
+  display: none; 
+}
 
-ul, ol    { list-style: none; }
+ul, ol { 
+  list-style: none; 
+}

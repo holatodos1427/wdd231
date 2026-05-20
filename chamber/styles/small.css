@@ -1,25 +1,25 @@
 :root {
-  --clr-primary:      #8B1A1A;
-  --clr-accent:       #C4622D;
-  --clr-accent-lt:    #D4855A;
-  --clr-dark:         #1E0F0A;
-  --clr-mid:          #4A2515;
-  --clr-surface:      #FAF6EF;
-  --clr-surface-2:    #F0E8D8;
-  --clr-surface-dim:  #CEC8BF;
-  --clr-border:       #D9C8A8;
-  --clr-text:         #2C1810;
-  --clr-text-muted:   #7A5A45;
-  --clr-white:        #FFFFFF;
-  --clr-gold:         #C89B3C;
-  --clr-silver:       #9BA8B0;
-  --clr-accent-hover: rgba(196, 98, 45, 0.2);
-  --clr-overlay-md:   rgba(30, 15, 10, 0.18);
-  --clr-overlay-lg:   rgba(30, 15, 10, 0.22);
-  --clr-white-08:     rgba(255, 255, 255, 0.08);
-  --clr-white-10:     rgba(255, 255, 255, 0.10);
-  --clr-white-50:     rgba(250, 246, 239, 0.50);
-  --clr-white-75:     rgba(250, 246, 239, 0.75);
+  --clr-primary:#8B1A1A;
+  --clr-accent:#C4622D;
+  --clr-accent-lt:#D4855A;
+  --clr-dark: #1E0F0A;
+  --clr-mid: #4A2515;
+  --clr-surface: #FAF6EF;
+  --clr-surface-2:#F0E8D8;
+  --clr-surface-dim:#CEC8BF;
+  --clr-border:#D9C8A8;
+  --clr-text:#2C1810;
+  --clr-text-muted:#7A5A45;
+  --clr-white:  #FFFFFF;
+  --clr-gold: #C89B3C;
+  --clr-silver: #9BA8B0;
+  --clr-accent-hover:rgba(196, 98, 45, 0.2);
+  --clr-overlay-md:rgba(30, 15, 10, 0.18);
+  --clr-overlay-lg:rgba(30, 15, 10, 0.22);
+  --clr-white-08: rgba(255, 255, 255, 0.08);
+  --clr-white-10: rgba(255, 255, 255, 0.10);
+  --clr-white-50:rgba(250, 246, 239, 0.50);
+  --clr-white-75:rgba(250, 246, 239, 0.75);
 
   --ff-heading: 'Playfair Display', Georgia, serif;
   --ff-body:    'Lora', Georgia, serif;
@@ -301,7 +301,7 @@ body {
   display: inline-block;
   white-space: nowrap;
 }
-.badge-gold   { background: var(--clr-gold);   color: var(--clr-white); }
+.badge-gold { background: var(--clr-gold);   color: var(--clr-white); }
 .badge-silver { background: var(--clr-silver); color: var(--clr-white); }
 .badge-member { background: var(--clr-border); color: var(--clr-text-muted); }
 
@@ -391,9 +391,9 @@ body {
 }
 
 .card-detail svg,
-.card-link svg  { width: 14px; height: 14px; }
+.card-link svg { width: 14px; height: 14px; }
 .card-detail svg { min-width: 14px; margin-top: 2px; fill: var(--clr-accent); }
-.card-link svg   { fill: currentColor; flex-shrink: 0; }
+.card-link svg { fill: currentColor; flex-shrink: 0; }
 
 .card-link {
   margin-top: auto;

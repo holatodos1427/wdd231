@@ -56,7 +56,7 @@
   line-height: 1.7;
 }
 
-/* ── CTA Button ── */
+/* CTA Button */
 .btn-cta {
   display: inline-block;
   background: var(--clr-primary);
@@ -89,7 +89,7 @@
   color: var(--clr-primary);
 }
 
-/* Home Grid weather, events, and CTA */
+/* home grid weather, events, and CTA */
 .home-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -99,7 +99,7 @@
   margin: 0 auto;
 }
 
-/* ── Shared card panel ── */
+/* shared card panel */
 .card-panel {
   background: var(--clr-white);
   border: 1px solid var(--clr-border);
@@ -128,7 +128,7 @@
   flex-shrink: 0;
 }
 
-/* ── Weather ── */
+/*  weather */
 .weather-now {
   margin-bottom: var(--sp-lg);
 }
@@ -217,7 +217,7 @@
   display: block;
 }
 
-/* Loading skeleton */
+/* loading skeleton */
 .weather-skeleton {
   display: flex;
   flex-direction: column;
@@ -241,7 +241,6 @@
   100% { background-position: -200% 0; }
 }
 
-/* ── Events ── */
 .events-list {
   display: flex;
   flex-direction: column;
@@ -306,7 +305,6 @@
   line-height: 1.5;
 }
 
-/* ── CTA Banner ── */
 .cta-banner {
   background: linear-gradient(135deg, var(--clr-dark) 0%, var(--clr-mid) 60%, var(--clr-primary) 100%);
   border-radius: 14px;
@@ -346,7 +344,6 @@
   margin-bottom: var(--sp-lg);
 }
 
-/* ── Spotlights ── */
 #spotlights-section {
   padding: 0 var(--sp-lg) var(--sp-2xl);
   max-width: 1200px;
@@ -376,7 +373,6 @@
   gap: var(--sp-lg);
 }
 
-/* Spotlight card */
 .spotlight-card {
   background: var(--clr-white);
   border: 1px solid var(--clr-border);
@@ -460,7 +456,6 @@
 
 .spotlight-website:hover { text-decoration: underline; }
 
-/* ── Loading state ── */
 .loading {
   text-align: center;
   padding: var(--sp-2xl);
@@ -487,61 +482,4 @@
   to { transform: rotate(360deg); }
 }
 
-/* ── Responsive: 640px+ ── */
-@media (min-width: 640px) {
-  .hero-content {
-    padding: var(--sp-2xl) var(--sp-xl);
-  }
 
-  .home-grid {
-    grid-template-columns: 1fr 1fr;
-    padding: var(--sp-xl);
-  }
-
-  .cta-banner {
-    grid-column: 1 / -1;
-  }
-
-  .spotlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #spotlights-section {
-    padding: 0 var(--sp-xl) var(--sp-2xl);
-  }
-}
-
-/* ── Responsive: 960px+ ── */
-@media (min-width: 960px) {
-  #home-hero {
-    min-height: 80vh;
-  }
-
-  .hero-heading {
-    font-size: clamp(3rem, 5vw, 4.5rem);
-  }
-
-  .home-grid {
-    grid-template-columns: 1fr 1.4fr;
-    align-items: start;
-  }
-
-  .cta-banner {
-    grid-column: 1 / -1;
-  }
-
-  .spotlights-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-/* ── Responsive: 1200px+ ── */
-@media (min-width: 1200px) {
-  .home-grid {
-    grid-template-columns: 320px 1fr 320px;
-  }
-
-  .cta-banner {
-    grid-column: 1 / -1;
-  }
-}

@@ -14,8 +14,15 @@
   min-height: 72vh;
   display: flex;
   align-items: center;
-  background: url('../images/arequipa-peru.webp') center / cover no-repeat;
   overflow: hidden;
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 .hero-overlay {
   position: absolute;

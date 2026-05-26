@@ -14,6 +14,7 @@
   align-items: center;
   background: url('../images/arequipa-peru.webp') center / cover no-repeat;
   overflow: hidden;
+  will-change: auto;
 }
 .hero-overlay {
   position: absolute;

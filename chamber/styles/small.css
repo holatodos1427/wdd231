@@ -19,6 +19,19 @@
   --sp-xl: 2rem;
   --sp-2xl: 3rem;
   --radius-sm: 4px;
+  --clr-text: #2C1810;
+  --clr-gold: #C89B3C;
+  --clr-silver: #9BA8B0;
+  --clr-shadow-sm: rgba(30, 15, 10, 0.18);
+  --clr-shadow-lg: rgba(30, 15, 10, 0.22);
+  --clr-accent-hover: rgba(196, 98, 45, 0.2);
+  --clr-white-08: rgba(255, 255, 255, 0.08);
+  --clr-white-10: rgba(255, 255, 255, 0.10);
+  --clr-white-50: rgba(250, 246, 239, 0.50);
+  --clr-white-80: rgba(250, 246, 239, 0.80);
+  --clr-white-85: rgba(250, 246, 239, 0.85);
+  --clr-hero-mid: rgba(74, 37, 21, 0.65);
+  --clr-hero-end: rgba(139, 26, 26, 0.45);
 }
 
 /* Base */
@@ -27,7 +40,7 @@ body {
   font-family: 'Lora', Georgia, serif;
   font-size: 1rem;
   line-height: 1.7;
-  color: #2C1810;
+  color: var(--clr-text);
   background-color: var(--clr-surface);
 }
 .skip-link {
@@ -49,7 +62,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 12px rgba(30, 15, 10, 0.18);
+  box-shadow: 0 4px 12px var(--clr-shadow-sm);
 }
 .header-inner {
   display: flex;
@@ -104,7 +117,7 @@ body {
   gap: 5px;
   cursor: pointer;
 }
-#menu-toggle:hover { background: rgba(196, 98, 45, 0.2); }
+#menu-toggle:hover { background: var(--clr-accent-hover); }
 .bar {
   display: block;
   width: 22px;
@@ -138,7 +151,7 @@ body {
   font-size: 0.95rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--clr-white-08);
   transition: background 0.25s ease, padding-left 0.25s ease;
 }
 #main-nav a:hover,
@@ -232,8 +245,8 @@ body {
   display: inline-block;
   white-space: nowrap;
 }
-.badge-gold { background: #C89B3C; color: var(--clr-white); }
-.badge-silver { background: #9BA8B0; color: var(--clr-white); }
+.badge-gold { background: var(--clr-gold); color: var(--clr-white); }
+.badge-silver { background: var(--clr-silver); color: var(--clr-white); }
 .badge-member { background: var(--clr-border); color: var(--clr-text-muted); }
 
 /* Grid Cards */
@@ -247,12 +260,12 @@ body {
   border: 1px solid var(--clr-border);
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(30, 15, 10, 0.18);
+  box-shadow: 0 1px 3px var(--clr-shadow-sm);
   display: flex;
   flex-direction: column;
 }
 .member-card:hover {
-  box-shadow: 0 8px 24px rgba(30, 15, 10, 0.22);
+  box-shadow: 0 8px 24px var(--clr-shadow-lg);
   border-color: var(--clr-accent);
 }
 .card-img-wrap {
@@ -414,10 +427,10 @@ body {
 .footer-bottom {
   margin: var(--sp-xl) auto 0;
   padding-top: var(--sp-md);
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-top: 1px solid var(--clr-white-10);
   font-family: var(--ff-ui);
   font-size: 0.78rem;
-  color: rgba(250, 246, 239, 0.50);
+  color: var(--clr-white-50);
   display: flex;
   flex-wrap: wrap;
   gap: var(--sp-xs);

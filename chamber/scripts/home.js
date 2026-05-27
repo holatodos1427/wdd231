@@ -2,14 +2,11 @@
 // home page
 // main.js nav and footer
 
-// Configuration 
-
 const LAT         = -16.4090;
 const LON         = -71.5375;
 const OWM_KEY     = '48f01f5bb6f3515d9a36e6299f466662';
 const MEMBERS_URL = 'data/members.json';
 
-// DOM References
 
 const weatherNowEl = document.getElementById('weather-now');
 const forecastEl   = document.getElementById('weather-forecast');

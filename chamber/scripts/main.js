@@ -1,16 +1,10 @@
-// ============================================================
-//  main.js  —  Arequipa Chamber of Commerce
-//  Shared across all pages: navigation toggle + footer dates
-// ============================================================
 
-// ── DOM References ───────────────────────────────────────────
 
 const menuToggle = document.getElementById('menu-toggle');
 const mainNav    = document.getElementById('main-nav');
 const yearEl     = document.getElementById('current-year');
 const dateEl     = document.getElementById('last-modified');
 
-// ── Navigation ───────────────────────────────────────────────
 
 menuToggle.addEventListener('click', () => {
   const isOpen = mainNav.classList.toggle('open');
@@ -24,7 +18,7 @@ mainNav.addEventListener('click', (e) => {
   }
 });
 
-// ── Footer ───────────────────────────────────────────────────
+
 
 const today = new Date();
 

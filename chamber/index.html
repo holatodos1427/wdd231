@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Arequipa Chamber of Commerce — Home. Discover local events, weather, and member business spotlights in La Ciudad Blanca, Peru.">
-  <meta name="author" content="WDD 231 Student — Arequipa Chamber Project">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arequipa Chamber of Commerce — Home. Discover local events, weather, and member business spotlights in La Ciudad Blanca, Peru." />
+  <meta name="author" content="WDD 231 Student — Arequipa Chamber Project" />
   <title>Arequipa Chamber of Commerce</title>
 
   <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
   <link rel="manifest" href="images/site.webmanifest" />
 
-  <meta property="og:title" content="Arequipa Chamber of Commerce">
-  <meta property="og:description" content="The home of La Ciudad Blanca's business community. Weather, events, and member spotlights.">
-  <meta property="og:image" content="https://holatodos1427.github.io/wdd231/chamber/images/arequipa-icon.webp">
-  <meta property="og:url" content="https://holatodos1427.github.io/wdd231/chamber/index.html">
-  <meta property="og:type" content="website">
+  <meta property="og:title" content="Arequipa Chamber of Commerce" />
+  <meta property="og:description" content="The home of La Ciudad Blanca's business community." />
+  <meta property="og:image" content="https://holatodos1427.github.io/wdd231/chamber/images/arequipa-peru.webp" />
+  <meta property="og:url" content="https://holatodos1427.github.io/wdd231/chamber/index.html" />
+  <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,13 +37,12 @@
   <header id="site-header">
     <div class="header-inner">
       <a href="index.html" class="logo-group" aria-label="Arequipa Chamber — Home">
-        <img class="logo-icon" src="images/arequipa-icon.webp" alt="Arequipa Chamber Icon" fetchpriority="high"/>
+        <img class="logo-icon" src="images/arequipa-icon.webp" alt="Arequipa Chamber Icon" fetchpriority="high" />
         <div class="logo-text">
           <span class="logo-title">Arequipa Chamber</span>
           <span class="logo-sub">of Commerce</span>
         </div>
       </a>
-
       <nav id="main-nav" aria-label="Main navigation">
         <ul role="list">
           <li><a href="index.html" aria-current="page">Home</a></li>
@@ -54,7 +52,6 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-
       <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -63,50 +60,27 @@
     </div>
   </header>
 
-
+  <section id="home-hero" aria-label="Welcome hero">
+    <img
+      src="images/arequipa-peru.webp"
+      alt="Aerial view of Arequipa, La Ciudad Blanca, Peru"
+      class="hero-bg-img"
+      fetchpriority="high"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-cta-wrap">
+      <a href="join.html" class="btn-cta">Join the Chamber</a>
+    </div>
+  </section>
 
   <main id="main-content">
 
-      <section id="home-hero" aria-label="Welcome hero">
-        <img
-          src="images/arequipa-peru.webp"
-          alt="Aerial view of Arequipa, La Ciudad Blanca, Peru"
-          class="hero-bg-img"
-          fetchpriority="high"
-        />
-        <div class="hero-overlay" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="hero-eyebrow">La Ciudad Blanca · Arequipa, Peru</p>
-          <h1 class="hero-heading">Where Arequipa<br>Does Business</h1>
-          <p class="hero-tagline">Connecting local entrepreneurs, fostering growth, and celebrating the spirit of La Ciudad Blanca since 2026.</p>
-          <a href="join.html" class="btn-cta">Join the Chamber</a>
-        </div>
-      </section>
-    <div class="home-grid">
+    <h1 class="home-heading">Home</h1>
 
-      <!-- weather -->
-      <section id="weather-section" aria-labelledby="weather-heading" class="card-panel">
-        <h2 id="weather-heading" class="panel-title">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.76 4.84l-1.8-1.79-1.41 1.41 1.79 1.79 1.42-1.41zM4 10.5H1v2h3v-2zm9-9.95h-2V3.5h2V.55zm7.45 3.91l-1.41-1.41-1.79 1.79 1.41 1.41 1.79-1.79zm-3.21 13.7l1.79 1.8 1.41-1.41-1.8-1.79-1.4 1.4zM20 10.5v2h3v-2h-3zm-8-5c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm-1 16.95h2V19.5h-2v2.95zm-7.45-3.91l1.41 1.41 1.79-1.8-1.41-1.41-1.79 1.8z"/></svg>
-          Weather
-        </h2>
-        <div id="weather-now" class="weather-now">
-          <div class="weather-skeleton" aria-busy="true" aria-live="polite">
-            <div class="skeleton-line wide"></div>
-            <div class="skeleton-line medium"></div>
-            <div class="skeleton-line narrow"></div>
-          </div>
-        </div>
-        <h3 class="forecast-label">3-Day Forecast</h3>
-        <div id="weather-forecast" class="forecast-grid" aria-live="polite"></div>
-      </section>
+    <div class="info-grid">
 
-      <!-- events -->
-      <section id="events-section" aria-labelledby="events-heading" class="card-panel">
-        <h2 id="events-heading" class="panel-title">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"/></svg>
-          Current Events
-        </h2>
+      <section class="info-panel events-panel" aria-labelledby="events-heading">
+        <h2 id="events-heading" class="info-panel-title">Events</h2>
         <ul class="events-list" role="list">
           <li class="event-item">
             <time class="event-date" datetime="2026-06-05">
@@ -115,7 +89,7 @@
             </time>
             <div class="event-info">
               <h3 class="event-title">Business Networking Mixer</h3>
-              <p class="event-detail">Portal de Flores 130 · 6:00 PM - 9:00 PM</p>
+              <p class="event-detail">Portal de Flores 130 · 6:00 PM – 9:00 PM</p>
               <p class="event-desc">Connect with Arequipa's top entrepreneurs over traditional pisco sours and local cuisine.</p>
             </div>
           </li>
@@ -126,7 +100,7 @@
             </time>
             <div class="event-info">
               <h3 class="event-title">Export & Trade Workshop</h3>
-              <p class="event-detail">Centro de Convenciones · 9:00 AM - 1:00 PM</p>
+              <p class="event-detail">Centro de Convenciones · 9:00 AM – 1:00 PM</p>
               <p class="event-desc">Learn the latest regulations for exporting Peruvian alpaca and textile products internationally.</p>
             </div>
           </li>
@@ -143,23 +117,30 @@
           </li>
         </ul>
       </section>
-
-      <aside class="cta-banner" aria-label="Call to action — join the chamber">
-        <div class="cta-inner">
-          <p class="cta-eyebrow">Grow With Us</p>
-          <h2 class="cta-heading">Become a Chamber Member</h2>
-          <p class="cta-body">Gain access to exclusive networking events, business resources, directory listings, and a community of over 200 local businesses in La Ciudad Blanca.</p>
-          <a href="join.html" class="btn-cta btn-cta-outline">Apply for Membership</a>
+      <section class="info-panel" aria-labelledby="weather-heading">
+        <h2 id="weather-heading" class="info-panel-title">Current Weather</h2>
+        <div id="weather-now" class="weather-now" aria-live="polite">
+          <div class="loading-inline">Loading…</div>
         </div>
-      </aside>
+      </section>
 
-    </div><!-- home-grid -->
+      <section class="info-panel" aria-labelledby="forecast-heading">
+        <h2 id="forecast-heading" class="info-panel-title">Weather Forecast</h2>
+        <div id="weather-forecast" class="forecast-list" aria-live="polite">
+          <div class="loading-inline">Loading…</div>
+        </div>
+      </section>
+
+    </div>
 
     <section id="spotlights-section" aria-labelledby="spotlights-heading">
-      <h2 id="spotlights-heading" class="section-heading">Member Spotlights</h2>
-      <p class="section-sub">Proud members of the Arequipa Chamber of Commerce</p>
-      <div id="spotlights-container" class="spotlights-grid" aria-live="polite" aria-atomic="true">
-        <p class="loading"><span class="spinner" role="status" aria-label="Loading spotlights"></span>Loading spotlights…</p>
+      <div
+        id="spotlights-container"
+        class="spotlights-grid"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        <p class="loading">Loading spotlights…</p>
       </div>
     </section>
 
@@ -169,7 +150,7 @@
     <div class="footer-inner">
       <div class="footer-brand">
         <div class="logo-group footer-logo-group">
-          <img class="logo-icon" src="images/arequipa-icon.webp" alt="Arequipa icon used as logo" aria-hidden="true" />
+          <img class="logo-icon" src="images/arequipa-icon.webp" alt="" aria-hidden="true" />
           <div class="logo-text">
             <span class="logo-title">Arequipa Chamber</span>
             <span class="logo-sub">of Commerce</span>

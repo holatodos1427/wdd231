@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Join the Arequipa Chamber of Commerce — Apply for membership and grow your business in La Ciudad Blanca.">
+  <meta name="author" content="WDD 231 Student — Arequipa Chamber Project">
+  <title>Join | Arequipa Chamber of Commerce</title>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/larger.css" />
+  <link rel="stylesheet" href="styles/join.css" />
+
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+
+  <a href="#join-main" class="skip-link">Skip to form</a>
+
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-group" aria-label="Arequipa Chamber — Home">
+        <img class="logo-icon" src="images/arequipa-icon.webp" alt="Arequipa Chamber Icon" fetchpriority="high" />
+        <div class="logo-text">
+          <span class="logo-title">Arequipa Chamber</span>
+          <span class="logo-sub">of Commerce</span>
+        </div>
+      </a>
+      <nav id="main-nav" aria-label="Main navigation">
+        <ul role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html" aria-current="page">Join</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-nav">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page hero -->
+  <div id="directory-hero" role="region" aria-label="Join page hero">
+    <p class="hero-label">Membership</p>
+    <p class="hero-subtitle">Become part of Arequipa's most connected business community.</p>
+  </div>
+
+  <main id="join-main">
+    <h1 class="page-title">Apply for Membership</h1>
+
+    <div class="join-layout">
+
+      <!-- ── APPLICATION FORM ── -->
+      <section class="form-section" aria-labelledby="form-heading">
+        <h2 id="form-heading" class="form-heading">Your Information</h2>
+
+        <form
+          method="get"
+          action="thankyou.html"
+          id="application-form"
+          novalidate
+        >
+
+          <div class="form-row">
+            <label for="fname">
+              First Name <span class="required" aria-hidden="true">*</span>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                title="Enter your first name"
+                autocomplete="given-name"
+                required
+                placeholder="Maria"
+              />
+            </label>
+
+            <label for="lname">
+              Last Name <span class="required" aria-hidden="true">*</span>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                title="Enter your last name"
+                autocomplete="family-name"
+                required
+                placeholder="Quispe"
+              />
+            </label>
+          </div>
+
+          <label for="org-title">
+            Organizational Title
+            <input
+              type="text"
+              id="org-title"
+              name="org-title"
+              title="Enter your title within your organization (letters, hyphens, spaces, min 7 characters)"
+              autocomplete="organization-title"
+              pattern="[A-Za-z\- ]{7,}"
+              placeholder="General Manager"
+            />
+          </label>
+
+          <label for="email">
+            Email Address <span class="required" aria-hidden="true">*</span>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              title="Enter a valid email address"
+              autocomplete="email"
+              required
+              placeholder="maria.quispe@empresa.pe"
+            />
+          </label>
+
+          <label for="phone">
+            Mobile Phone <span class="required" aria-hidden="true">*</span>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              title="Enter your mobile phone number"
+              autocomplete="tel"
+              required
+              placeholder="+51 999 123 456"
+            />
+          </label>
+
+          <label for="org-name">
+            Business / Organization Name <span class="required" aria-hidden="true">*</span>
+            <input
+              type="text"
+              id="org-name"
+              name="org-name"
+              title="Enter your business or organization name"
+              autocomplete="organization"
+              required
+              placeholder="Textiles Arequipa S.A.C."
+            />
+          </label>
+
+          <label for="membership">
+            Membership Level <span class="required" aria-hidden="true">*</span>
+            <select id="membership" name="membership" title="Select a membership level" required>
+              <option value="" disabled selected>Select a level…</option>
+              <option value="np">NP Membership — Non-Profit (Free)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </label>
+
+          <label for="description">
+            Business Description
+            <textarea
+              id="description"
+              name="description"
+              title="Briefly describe your business or organization"
+              rows="4"
+              placeholder="Tell us about your business, products, or services…"
+            ></textarea>
+          </label>
+
+          <!-- Hidden timestamp — set by JS when the form loads -->
+          <input type="hidden" id="timestamp" name="timestamp" />
+
+          <input type="submit" value="Submit Application" class="btn-submit" />
+
+        </form>
+      </section>
+
+      <!-- ── MEMBERSHIP CARDS ── -->
+      <aside class="membership-cards" aria-label="Membership levels">
+        <h2 class="form-heading">Membership Levels</h2>
+
+        <div class="cards-grid">
+
+          <div class="level-card level-np" style="--i:0">
+            <h3 class="level-name">NP Membership</h3>
+            <p class="level-fee">Free</p>
+            <p class="level-desc">For registered non-profit organizations serving the Arequipa community.</p>
+            <button class="btn-info" data-modal="modal-np" aria-haspopup="dialog">
+              Learn More
+            </button>
+          </div>
+
+          <div class="level-card level-bronze" style="--i:1">
+            <h3 class="level-name">Bronze</h3>
+            <p class="level-fee">S/ 500 / year</p>
+            <p class="level-desc">Essential membership for small businesses getting started.</p>
+            <button class="btn-info" data-modal="modal-bronze" aria-haspopup="dialog">
+              Learn More
+            </button>
+          </div>
+
+          <div class="level-card level-silver" style="--i:2">
+            <h3 class="level-name">Silver</h3>
+            <p class="level-fee">S/ 1,200 / year</p>
+            <p class="level-desc">Enhanced visibility and networking for growing businesses.</p>
+            <button class="btn-info" data-modal="modal-silver" aria-haspopup="dialog">
+              Learn More
+            </button>
+          </div>
+
+          <div class="level-card level-gold" style="--i:3">
+            <h3 class="level-name">Gold</h3>
+            <p class="level-fee">S/ 2,500 / year</p>
+            <p class="level-desc">Maximum exposure and premium benefits for established businesses.</p>
+            <button class="btn-info" data-modal="modal-gold" aria-haspopup="dialog">
+              Learn More
+            </button>
+          </div>
+
+        </div>
+      </aside>
+    </div><!-- /.join-layout -->
+  </main>
+
+  <!-- ── MODALS ── -->
+
+  <dialog id="modal-np" aria-labelledby="modal-np-title">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-np-title" class="modal-title">NP Membership</h2>
+      <p class="modal-fee">Free</p>
+      <ul class="modal-benefits">
+        <li>Chamber directory listing</li>
+        <li>Access to monthly networking events</li>
+        <li>Chamber newsletter subscription</li>
+        <li>Access to member resources portal</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog id="modal-bronze" aria-labelledby="modal-bronze-title">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-bronze-title" class="modal-title">Bronze Membership</h2>
+      <p class="modal-fee">S/ 500 / year</p>
+      <ul class="modal-benefits">
+        <li>All NP benefits</li>
+        <li>Enhanced directory listing with logo</li>
+        <li>2 sponsored event tickets per year</li>
+        <li>10% discount on chamber events</li>
+        <li>Business training workshops</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog id="modal-silver" aria-labelledby="modal-silver-title">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-silver-title" class="modal-title">Silver Membership</h2>
+      <p class="modal-fee">S/ 1,200 / year</p>
+      <ul class="modal-benefits">
+        <li>All Bronze benefits</li>
+        <li>Spotlight feature on home page</li>
+        <li>Social media promotion (monthly)</li>
+        <li>5 sponsored event tickets per year</li>
+        <li>20% discount on chamber events</li>
+        <li>Priority directory placement</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog id="modal-gold" aria-labelledby="modal-gold-title">
+    <div class="modal-inner">
+      <button class="modal-close" aria-label="Close dialog">✕</button>
+      <h2 id="modal-gold-title" class="modal-title">Gold Membership</h2>
+      <p class="modal-fee">S/ 2,500 / year</p>
+      <ul class="modal-benefits">
+        <li>All Silver benefits</li>
+        <li>Premium spotlight on home page</li>
+        <li>Weekly social media promotion</li>
+        <li>Unlimited event tickets</li>
+        <li>30% discount on all events</li>
+        <li>Logo on chamber printed materials</li>
+        <li>Dedicated account manager</li>
+      </ul>
+    </div>
+  </dialog>
+
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-group footer-logo-group">
+          <img class="logo-icon" src="images/arequipa-icon.webp" alt="" aria-hidden="true" />
+          <div class="logo-text">
+            <span class="logo-title">Arequipa Chamber</span>
+            <span class="logo-sub">of Commerce</span>
+          </div>
+        </div>
+        <p>Supporting local business and community growth in La Ciudad Blanca since 2026.</p>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <address>
+          Portal de Flores 130<br />
+          Arequipa 04001, Peru<br />
+          <a href="tel:+51542001234">(054) 200-1234</a><br />
+          <a href="mailto:info@arequipachamber.pe">info@arequipachamber.pe</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <address>
+          <a href="index.html">Home</a><br />
+          <a href="directory.html">Directory</a><br />
+          <a href="discover.html">Discover Arequipa</a><br />
+          <a href="join.html">Join the Chamber</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="current-year"></span> Arequipa Chamber of Commerce</span>
+      <span>David Cambeiro | WDD 231</span>
+      <span id="last-modified"></span>
+    </div>
+  </footer>
+
+</body>
+</html>

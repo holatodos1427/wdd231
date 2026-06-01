@@ -1,0 +1,392 @@
+/* join.css — Join & Thank You pages */
+
+/* Page layout: form on left, membership cards on right */
+.join-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-2xl);
+  padding: var(--sp-xl) var(--sp-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Form section */
+.form-section {
+  width: 100%;
+}
+
+.form-heading {
+  font-family: var(--ff-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-lg);
+  padding-bottom: var(--sp-sm);
+  border-bottom: 2px solid var(--clr-border);
+}
+
+/* Each label wraps its input for accessibility */
+#application-form label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+  font-family: var(--ff-ui);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-text-muted);
+  margin-bottom: var(--sp-md);
+}
+
+/* Two fields side by side on wider screens */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-md);
+}
+
+/* Shared input styles */
+#application-form input[type="text"],
+#application-form input[type="email"],
+#application-form input[type="tel"],
+#application-form select,
+#application-form textarea {
+  width: 100%;
+  padding: var(--sp-sm) var(--sp-md);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--ff-ui);
+  font-size: 0.95rem;
+  color: var(--clr-text);
+  background: var(--clr-white);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+#application-form input:focus,
+#application-form select:focus,
+#application-form textarea:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 3px var(--clr-accent-hover);
+}
+
+#application-form input:invalid:not(:placeholder-shown) {
+  border-color: var(--clr-primary);
+}
+
+#application-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Required asterisk */
+.required {
+  color: var(--clr-primary);
+  margin-left: 2px;
+}
+
+/* Submit button */
+.btn-submit {
+  display: block;
+  width: 100%;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-ui);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--sp-md) var(--sp-xl);
+  border: 2px solid var(--clr-primary);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: var(--sp-lg);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+.btn-submit:hover {
+  background: var(--clr-dark);
+  border-color: var(--clr-dark);
+}
+
+/* Membership cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-md);
+}
+
+/* Each membership card fades and slides in on load */
+.level-card {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: 14px;
+  padding: var(--sp-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-xs);
+  box-shadow: 0 1px 3px var(--clr-shadow-sm);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: card-appear 0.5s ease forwards;
+  animation-delay: calc(var(--i) * 0.15s);
+}
+
+@keyframes card-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Colored top bar per level */
+.level-card::before {
+  content: '';
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  margin-bottom: var(--sp-xs);
+}
+
+.level-np::before     { background: var(--clr-text-muted); }
+.level-bronze::before { background: #cd7f32; }
+.level-silver::before { background: var(--clr-silver); }
+.level-gold::before   { background: var(--clr-gold); }
+
+.level-name {
+  font-family: var(--ff-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+}
+
+.level-fee {
+  font-family: var(--ff-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+}
+
+.level-desc {
+  font-family: var(--ff-ui);
+  font-size: 0.8rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.btn-info {
+  margin-top: var(--sp-sm);
+  background: none;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  padding: var(--sp-xs) var(--sp-md);
+  font-family: var(--ff-ui);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.btn-info:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border-color: var(--clr-primary);
+}
+
+/* Modals */
+dialog {
+  border: none;
+  border-radius: 14px;
+  padding: 0;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 8px 32px var(--clr-shadow-lg);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+dialog::backdrop {
+  background: rgba(30, 15, 10, 0.55);
+}
+
+.modal-inner {
+  padding: var(--sp-xl) var(--sp-lg);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--sp-md);
+  right: var(--sp-md);
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--clr-text-muted);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s ease;
+}
+
+.modal-close:hover {
+  background: var(--clr-surface-2);
+  color: var(--clr-primary);
+}
+
+.modal-title {
+  font-family: var(--ff-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-xs);
+}
+
+.modal-fee {
+  font-family: var(--ff-ui);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--clr-accent);
+  margin-bottom: var(--sp-md);
+}
+
+.modal-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-sm);
+}
+
+.modal-benefits li {
+  font-family: var(--ff-ui);
+  font-size: 0.9rem;
+  color: var(--clr-text-muted);
+  padding-left: var(--sp-lg);
+  position: relative;
+}
+
+.modal-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--clr-accent);
+  font-weight: 700;
+}
+
+/* Thank you page */
+#thankyou-main {
+  display: flex;
+  justify-content: center;
+  padding: var(--sp-2xl) var(--sp-lg);
+}
+
+.thankyou-card {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: 14px;
+  padding: var(--sp-2xl) var(--sp-xl);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--clr-shadow-sm);
+}
+
+.thankyou-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto var(--sp-md);
+}
+
+.thankyou-heading {
+  font-family: var(--ff-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-sm);
+}
+
+.thankyou-sub {
+  font-family: var(--ff-ui);
+  font-size: 0.95rem;
+  color: var(--clr-text-muted);
+  line-height: 1.7;
+  margin-bottom: var(--sp-xl);
+}
+
+.summary-heading {
+  font-family: var(--ff-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-md);
+  padding-bottom: var(--sp-sm);
+  border-bottom: 2px solid var(--clr-border);
+}
+
+/* Definition list for submitted data */
+.summary-list {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--sp-sm) var(--sp-md);
+  text-align: left;
+  margin-bottom: var(--sp-xl);
+}
+
+.summary-list dt {
+  font-family: var(--ff-ui);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--clr-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.summary-list dd {
+  font-family: var(--ff-ui);
+  font-size: 0.95rem;
+  color: var(--clr-text);
+}
+
+.btn-cta-thankyou {
+  display: inline-block;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  font-family: var(--ff-ui);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: var(--sp-md) var(--sp-xl);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--clr-primary);
+  transition: background 0.25s ease;
+}
+
+.btn-cta-thankyou:hover {
+  background: var(--clr-dark);
+  border-color: var(--clr-dark);
+}
+
+/* Responsive — tablet and up */
+@media (min-width: 640px) {
+  .join-layout {
+    grid-template-columns: 1.5fr 1fr;
+    align-items: start;
+    padding: var(--sp-xl);
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

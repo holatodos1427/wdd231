@@ -25,7 +25,6 @@
   z-index: 1;
 }
 
-/* CTA button sits bottom-right of the hero */
 .hero-cta-wrap {
   position: relative;
   z-index: 2;
@@ -48,7 +47,6 @@
   background: var(--clr-white);
 }
 
-/* "Home" page heading */
 .home-heading {
   font-family: var(--ff-heading);
   font-size: 1.8rem;
@@ -59,7 +57,6 @@
   margin: 0 auto;
 }
 
-/* Three-column info grid */
 .info-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -69,13 +66,13 @@
   border: 1px solid var(--clr-border);
 }
 
-/* Each panel */
+/* each panel */
 .info-panel {
   background: var(--clr-surface);
   border-bottom: 1px solid var(--clr-border);
 }
 
-/* Dark header bar — matches wireframe */
+/* dark header bar — matches wireframe */
 .info-panel-title {
   font-family: var(--ff-ui);
   font-size: 1rem;
@@ -87,12 +84,12 @@
   letter-spacing: 0.03em;
 }
 
-/* Panel content padding */
+/* panel content padding */
 .info-panel > *:not(.info-panel-title) {
   padding: var(--sp-md);
 }
 
-/* Events list */
+/* events list */
 .events-list {
   display: flex;
   flex-direction: column;
@@ -151,7 +148,7 @@
   line-height: 1.5;
 }
 
-/* Current weather */
+/* current weather */
 .weather-now {
   padding: var(--sp-md);
 }
@@ -186,7 +183,6 @@
   line-height: 1.8;
 }
 
-/* 3-day forecast as a vertical list */
 .forecast-list {
   padding: var(--sp-md);
   display: flex;
@@ -214,7 +210,7 @@
   height: 28px;
 }
 
-/* Loading inline */
+/* loading inline */
 .loading-inline {
   font-family: var(--ff-ui);
   font-size: 0.85rem;
@@ -222,7 +218,7 @@
   padding: var(--sp-md);
 }
 
-/* Spotlight cards */
+/* spotlight cards */
 #spotlights-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -308,7 +304,7 @@
   text-decoration: underline;
 }
 
-/* Loading */
+/* loading */
 .loading {
   text-align: center;
   padding: var(--sp-2xl);
@@ -317,7 +313,7 @@
   font-family: var(--ff-ui);
 }
 
-/* Tablet and up */
+/* tablet and up */
 @media (min-width: 640px) {
   #home-hero {
     min-height: 52vh;
@@ -346,7 +342,7 @@
   }
 }
 
-/* Desktop and up */
+/* desktop and up */
 @media (min-width: 960px) {
   #home-hero {
     min-height: 60vh;

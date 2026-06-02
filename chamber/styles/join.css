@@ -128,8 +128,11 @@
   opacity: 0;
   transform: translateY(20px);
   animation: card-appear 0.5s ease forwards;
-  animation-delay: calc(var(--i) * 0.15s);
 }
+.level-card:nth-child(1) { animation-delay: 0.00s; }
+.level-card:nth-child(2) { animation-delay: 0.15s; }
+.level-card:nth-child(3) { animation-delay: 0.30s; }
+.level-card:nth-child(4) { animation-delay: 0.45s; }
 
 @keyframes card-appear {
   to {
@@ -163,7 +166,7 @@
   font-family: var(--ff-ui);
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--clr-accent);
+  color: var(--clr-primary);
 }
 
 .level-desc {
@@ -249,7 +252,7 @@ dialog::backdrop {
   font-family: var(--ff-ui);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--clr-accent);
+  color: var(--clr-primary);
   margin-bottom: var(--sp-md);
 }
 

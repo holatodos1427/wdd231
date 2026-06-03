@@ -1,9 +1,5 @@
 
-// GET
-
 const summaryList = document.getElementById('summary-list');
-
-// Membership level display names
 
 const levelNames = {
   np:     'NP Membership (Non-Profit)',
@@ -12,12 +8,12 @@ const levelNames = {
   gold:   'Gold Membership',
 };
 
-// Read & display URL parameters
+// read & display URL parameters
 
 function displaySubmission() {
   const params = new URLSearchParams(window.location.search);
 
-  // Only show the required fields
+  // only show the required fields
   const fields = [
     { key: 'fname', label: 'First Name'   },
     { key: 'lname', label: 'Last Name'    },
@@ -30,11 +26,11 @@ function displaySubmission() {
 
   if (!summaryList) return;
 
-  // Build the definition list rows
+  // build the definition list rows
   summaryList.innerHTML = fields.map(({ key, label }) => {
     let value = params.get(key) || '—';
 
-    // Format the timestamp into a readable date
+    // this format the timestamp into a readable date
     if (key === 'timestamp' && value !== '—') {
       value = new Date(value).toLocaleString('en-US', {
         dateStyle: 'long',

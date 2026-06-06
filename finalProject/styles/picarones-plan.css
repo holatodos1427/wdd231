@@ -313,15 +313,6 @@ footer {
   margin:     1rem 0;
 }
 
-
-/* ============================================================
-   ADDITIONAL CLASSES
-   These replace every inline style that was previously
-   written as style="..." directly on HTML elements.
-   Keeping all visual rules here means the HTML stays clean.
-   ============================================================ */
-
-/* Section 1 — site name displayed with the heading font */
 .site-name-display {
   font-family: var(--font-display);
   font-size: 1.15rem;
@@ -329,7 +320,6 @@ footer {
   color: var(--color-primary);
 }
 
-/* Section 2 — purpose bullet list */
 .purpose-list {
   margin-top: .6rem;
   padding-left: 1.4rem;
@@ -337,7 +327,6 @@ footer {
   gap: .4rem;
 }
 
-/* Section 4 — individual swatch background colors */
 .swatch-block { border: 1px solid rgba(45, 26, 20, .12); }
 .swatch-gold      { background: #F59E0B; }
 .swatch-dark      { background: #2D1A14; }
@@ -346,7 +335,6 @@ footer {
 .swatch-accent    { background: #4E6E2F; }
 .swatch-bg        { background: #FFFBF0; border-color: #F59E0B; }
 
-/* Section 5 — italic line inside Playfair Display specimen */
 .specimen-display-italic {
   font-family: var(--font-display);
   font-style: italic;
@@ -355,35 +343,24 @@ footer {
   margin-top: .3rem;
 }
 
-/* Section 5 — small note below each font sample */
 .specimen-note {
   font-size: .82rem;
   color: var(--color-muted);
   margin-top: .5rem;
 }
 
-/* Section 5 — add top margin to the 2nd and 3rd specimen boxes */
 .type-specimen--spaced {
   margin-top: .75rem;
 }
 
-/* Section 6 — wireframe container forced to single column */
 .wireframes--single {
   grid-template-columns: 1fr;
   margin-top: 1rem;
 }
 
-/* Section 6 — the wireframe image itself */
 .wf-image {
   width: 100%;
   border-radius: var(--radius);
   border: 2px solid var(--color-gold);
   display: block;
-}
-
-/* Section 6 — the small note below the wireframe */
-.wireframe-note {
-  margin-top: 1rem;
-  font-size: .85rem;
-  color: var(--color-muted);
 }

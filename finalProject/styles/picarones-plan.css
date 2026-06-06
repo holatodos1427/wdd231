@@ -1,0 +1,389 @@
+:root {
+  /* Layout Backgrounds */
+  --color-bg:        #FFFBF0;
+  --color-surface:   #FFFFFF;
+
+  /* Brand Colors & Hierarchy */
+  --color-primary:   #D84315;
+  --color-secondary: #E65100;
+  --color-gold:      #F59E0B;
+
+  /* Typography Colors */
+  --color-dark:      #2D1A14;
+  --color-muted:     #795548;
+  --color-accent:    #4E6E2F;
+
+  /* Typography Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-script:  'Dancing Script', cursive;
+  --font-body:    'Lato', Helvetica, sans-serif;
+
+  /* UI Styling */
+  --radius: 8px;
+  --shadow: 0 4px 24px rgba(45, 26, 20, 0.06);
+  --max-w:  860px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;   
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color:            var(--color-dark);
+  font-family:      var(--font-body);
+  font-size:        1rem;    
+  line-height:      1.75;    
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+header {
+  background-color: var(--color-primary);
+  color: #FFFBF0;
+  padding: 2.5rem 1.5rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;   
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 18px,
+    rgba(0, 0, 0, 0.07) 18px,
+    rgba(0, 0, 0, 0.07) 19px
+  );
+  
+  pointer-events: none;
+}
+
+header .logo-text {
+  font-family: var(--font-script);
+  
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  color: #FFFBF0;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.20);
+  position: relative;
+  letter-spacing: 0.02em;
+}
+
+header p.tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 251, 240, 0.90);
+  margin-top: .35rem;
+  position: relative;
+}
+
+header .doc-label {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--color-accent);   
+  color: #FFF8E1;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .35rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,251,240,0.30);
+  position: relative;
+}
+
+main {
+  max-width: var(--max-w);
+  margin: 0 auto;               
+  padding: 3rem 1.5rem 5rem;    
+  display: grid;
+  gap: 2.5rem;                  
+}
+
+.card {
+  background:    var(--color-surface);
+  border-radius: var(--radius);
+  box-shadow:    var(--shadow);
+  border-left:   5px solid var(--color-gold);   
+  padding:       2rem 2rem 1.75rem;
+}
+
+.card h2 {
+  font-family:   var(--font-display);
+  font-size:     1.45rem;
+  color:         var(--color-primary);
+  margin-bottom: .9rem;
+  display:       flex;
+  align-items:   center;
+  gap:           .6rem;
+}
+
+.card h2 .num {
+  background:  var(--color-primary);
+  color:       #FFF8E1;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size:   .78rem;
+  width:       1.7rem;
+  height:      1.7rem;
+  border-radius: 50%;   
+  display:     inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;   
+}
+
+.card p,
+.card li {
+  font-size: .97rem;
+  color: var(--color-dark);
+}
+
+.swatches {
+  display:    flex;
+  flex-wrap:  wrap;
+  gap:        1rem;
+  margin-top: 1rem;
+}
+
+.swatch {
+  display:     flex;
+  align-items: flex-start;
+  gap:         .75rem;
+}
+
+.swatch-block {
+  width:         52px;
+  height:        52px;
+  border-radius: 4px;
+  border:        1px solid rgba(62, 39, 35, .12);   
+  flex-shrink:   0;
+}
+
+.swatch-info strong {
+  display:     block;
+  font-size:   .82rem;
+  font-weight: 700;
+  color:       var(--color-dark);
+}
+
+.swatch-info span {
+  display:   block;
+  font-size: .78rem;
+  color:     var(--color-muted);
+}
+
+.type-specimen {
+  border:        1px solid var(--color-gold);
+  border-radius: var(--radius);
+  padding:       1.1rem 1.3rem;
+  margin-top:    .75rem;
+  background:    #fffbf2;   
+}
+
+.type-specimen .label {
+  font-size:      .72rem;
+  font-weight:    700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color:          var(--color-muted);
+  margin-bottom:  .4rem;
+}
+
+.specimen-display {
+  font-family: var(--font-display);
+  font-size:   1.9rem;
+  color:       var(--color-primary);
+}
+
+.specimen-script {
+  font-family: var(--font-script);
+  font-size:   2.1rem;
+  color:       var(--color-secondary);
+}
+
+.specimen-body {
+  font-family: var(--font-body);
+  font-size:   1rem;
+  color:       var(--color-dark);
+}
+
+.scenarios-list {
+  list-style: none;   
+  padding:    0;
+  display:    grid;
+  gap:        .75rem;
+  margin-top: .5rem;
+}
+
+.scenarios-list li {
+  background:    var(--color-bg);
+  border:        1px solid var(--color-gold);
+  border-radius: var(--radius);
+  padding:       .85rem 1.1rem .85rem 2.2rem;  
+  font-style:    italic;
+  color:         var(--color-dark);
+  position:      relative;
+}
+
+.scenarios-list li::before {
+  content:     '"';
+  font-family: var(--font-display);
+  font-size:   2rem;
+  color:       var(--color-secondary);
+  position:    absolute;
+  left:        .5rem;
+  top:         .2rem;
+  line-height: 1;
+}
+
+.wireframes {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;   
+  gap:                   1.5rem;
+  margin-top:            1rem;
+}
+
+@media (max-width: 600px) {
+  .wireframes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wf-wrapper {
+  text-align: center;
+}
+
+.wf-wrapper h3 {
+  font-family:    var(--font-body);
+  font-weight:    700;
+  font-size:      .8rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color:          var(--color-muted);
+  margin-bottom:  .6rem;
+}
+
+.wf-wrapper svg {
+  border:        2px solid var(--color-gold);
+  border-radius: var(--radius);
+  background:    #fff;
+  width:         100%;
+  height:        auto;  
+}
+
+footer {
+  text-align:  center;
+  padding:     1.5rem;
+  font-size:   .8rem;
+  color:       var(--color-muted);
+  border-top:  1px solid var(--color-gold);
+}
+
+.tag {
+  display:       inline-block;
+  background:    var(--color-accent);   
+  color:         #FFF8E1;
+  font-size:     .72rem;
+  font-weight:   700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  padding:       .2rem .6rem;
+  border-radius: 2px;
+  margin-right:  .4rem;
+}
+
+.divider {
+  border:     none;
+  border-top: 1px dashed var(--color-gold);
+  margin:     1rem 0;
+}
+
+
+/* ============================================================
+   ADDITIONAL CLASSES
+   These replace every inline style that was previously
+   written as style="..." directly on HTML elements.
+   Keeping all visual rules here means the HTML stays clean.
+   ============================================================ */
+
+/* Section 1 — site name displayed with the heading font */
+.site-name-display {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Section 2 — purpose bullet list */
+.purpose-list {
+  margin-top: .6rem;
+  padding-left: 1.4rem;
+  display: grid;
+  gap: .4rem;
+}
+
+/* Section 4 — individual swatch background colors */
+.swatch-block { border: 1px solid rgba(45, 26, 20, .12); }
+.swatch-gold      { background: #F59E0B; }
+.swatch-dark      { background: #2D1A14; }
+.swatch-primary   { background: #D84315; }
+.swatch-secondary { background: #E65100; }
+.swatch-accent    { background: #4E6E2F; }
+.swatch-bg        { background: #FFFBF0; border-color: #F59E0B; }
+
+/* Section 5 — italic line inside Playfair Display specimen */
+.specimen-display-italic {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-top: .3rem;
+}
+
+/* Section 5 — small note below each font sample */
+.specimen-note {
+  font-size: .82rem;
+  color: var(--color-muted);
+  margin-top: .5rem;
+}
+
+/* Section 5 — add top margin to the 2nd and 3rd specimen boxes */
+.type-specimen--spaced {
+  margin-top: .75rem;
+}
+
+/* Section 6 — wireframe container forced to single column */
+.wireframes--single {
+  grid-template-columns: 1fr;
+  margin-top: 1rem;
+}
+
+/* Section 6 — the wireframe image itself */
+.wf-image {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-gold);
+  display: block;
+}
+
+/* Section 6 — the small note below the wireframe */
+.wireframe-note {
+  margin-top: 1rem;
+  font-size: .85rem;
+  color: var(--color-muted);
+}

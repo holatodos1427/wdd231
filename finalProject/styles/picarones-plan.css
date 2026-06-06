@@ -83,7 +83,7 @@ header p.tagline {
   font-family: var(--font-display);
   font-style: italic;
   font-size: 1rem;
-  color: rgba(255, 251, 240, 0.90);
+  color: #FFFBF0;
   margin-top: .35rem;
   position: relative;
 }

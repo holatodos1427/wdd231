@@ -82,7 +82,6 @@ header .logo-img .logo {
   height: clamp(3rem, 10vw, 6rem);
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
 }
 
 header p.tagline {

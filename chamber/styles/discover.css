@@ -1,0 +1,221 @@
+/* discover.css — Discover Arequipa page */
+
+/* Visitor banner */
+.visitor-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-md);
+  background: var(--clr-dark);
+  color: var(--clr-white);
+  padding: var(--sp-sm) var(--sp-lg);
+  font-family: var(--ff-ui);
+  font-size: 0.88rem;
+  max-width: 1200px;
+  margin: var(--sp-md) auto 0;
+  border-radius: var(--radius-sm);
+}
+.visitor-banner[hidden] {
+  display: none;
+}
+#visitor-close {
+  background: none;
+  border: none;
+  color: var(--clr-white);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0 var(--sp-xs);
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+#visitor-close:hover {
+  opacity: 1;
+}
+
+/* Places grid */
+#discover-main {
+  padding-bottom: var(--sp-2xl);
+}
+.places-grid {
+  display: grid;
+  gap: var(--sp-lg);
+  padding: var(--sp-xl) var(--sp-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";
+}
+
+/* Named grid areas */
+.place-card:nth-child(1) { grid-area: card1; }
+.place-card:nth-child(2) { grid-area: card2; }
+.place-card:nth-child(3) { grid-area: card3; }
+.place-card:nth-child(4) { grid-area: card4; }
+.place-card:nth-child(5) { grid-area: card5; }
+.place-card:nth-child(6) { grid-area: card6; }
+.place-card:nth-child(7) { grid-area: card7; }
+.place-card:nth-child(8) { grid-area: card8; }
+
+/* Base card — vertical layout */
+.place-card {
+  background: var(--clr-white);
+  border: 1px solid var(--clr-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px var(--clr-shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Figure always on top in vertical layout */
+.place-card figure {
+  margin: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.place-card figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body wraps all text content — one flex child alongside figure */
+.place-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--sp-md);
+  gap: var(--sp-xs);
+}
+.place-card-body h2 {
+  font-family: var(--ff-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-primary);
+  margin: 0;
+}
+.place-card-body address {
+  font-family: var(--ff-ui);
+  font-size: 0.78rem;
+  color: var(--clr-text-muted);
+  font-style: normal;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.place-card-body address::before {
+  content: '📍';
+  font-size: 0.7rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.place-card-body p {
+  font-family: var(--ff-ui);
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  line-height: 1.6;
+  flex: 1;
+  margin: 0;
+}
+.btn-learn-more {
+  display: block;
+  width: 100%;
+  padding: var(--sp-sm) var(--sp-md);
+  background: none;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--ff-ui);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--clr-primary);
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+  text-align: center;
+  margin-top: var(--sp-sm);
+}
+.btn-learn-more:hover {
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  border-color: var(--clr-primary);
+}
+
+/* Medium screens — 2 columns, cards 3 and 6 span full width */
+@media (min-width: 641px) {
+  .places-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3"
+      "card4 card5"
+      "card6 card6"
+      "card7 card8";
+  }
+
+  /* Wide cards become horizontal: figure left, body right */
+  .place-card:nth-child(3),
+  .place-card:nth-child(6) {
+    flex-direction: row;
+  }
+  .place-card:nth-child(3) figure,
+  .place-card:nth-child(6) figure {
+    width: 40%;
+    flex-shrink: 0;
+  }
+  .place-card:nth-child(3) figure img,
+  .place-card:nth-child(6) figure img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+  }
+
+  /* Image hover effect on medium and up */
+  .place-card figure img {
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  .place-card figure img:hover {
+    transform: scale(1.06);
+    filter: brightness(1.1) saturate(1.15);
+  }
+}
+
+/* Large screens — 3 columns, wide cards span 2 columns */
+@media (min-width: 1025px) {
+  .places-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "card1 card2 card3"
+      "card4 card4 card5"
+      "card6 card6 card7"
+      "card8 card8 card8";
+  }
+
+  /* Cards 4, 6, 8 span 2 or 3 columns — horizontal layout */
+  .place-card:nth-child(4),
+  .place-card:nth-child(6),
+  .place-card:nth-child(8) {
+    flex-direction: row;
+  }
+  .place-card:nth-child(4) figure,
+  .place-card:nth-child(6) figure,
+  .place-card:nth-child(8) figure {
+    width: 35%;
+    flex-shrink: 0;
+  }
+  .place-card:nth-child(4) figure img,
+  .place-card:nth-child(6) figure img,
+  .place-card:nth-child(8) figure img {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+  }
+}

@@ -284,9 +284,7 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ----------------------------------------------------------
-   Buttons
-   ---------------------------------------------------------- */
+/* buttons   */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -368,9 +366,6 @@
   padding: 1rem;
 }
 
-/* ----------------------------------------------------------
-   Hero
-   ---------------------------------------------------------- */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -493,9 +488,6 @@
   stroke: var(--color-amber);
 }
 
-/* ----------------------------------------------------------
-   Stats Bar
-   ---------------------------------------------------------- */
 .stats-bar {
   background-color: var(--color-chocolate);
   padding-block: var(--space-2xl);
@@ -524,9 +516,6 @@
   color: rgba(255, 251, 240, 0.7);
 }
 
-/* ----------------------------------------------------------
-   Story Section
-   ---------------------------------------------------------- */
 .story {
   display: grid;
   gap: var(--space-3xl);
@@ -639,9 +628,7 @@
   margin: 0;
 }
 
-/* ----------------------------------------------------------
-   Featured Cards (Home page)
-   ---------------------------------------------------------- */
+/* cards for home page */
 .featured-grid {
   display: grid;
   gap: var(--space-lg);
@@ -723,9 +710,6 @@
   display: block;
 }
 
-/* ----------------------------------------------------------
-   Location CTA Banner
-   ---------------------------------------------------------- */
 .location-cta {
   background: linear-gradient(
     135deg,
@@ -816,9 +800,6 @@
   font-size: 1rem;
 }
 
-/* ----------------------------------------------------------
-   Testimonials
-   ---------------------------------------------------------- */
 .testimonial-grid {
   display: grid;
   gap: var(--space-xl);
@@ -892,9 +873,7 @@
   color: var(--color-text-muted);
 }
 
-/* ----------------------------------------------------------
-   Menu Page
-   ---------------------------------------------------------- */
+/* menu page */
 .menu-hero {
   padding-top: calc(var(--nav-height) + var(--space-3xl));
   padding-bottom: var(--space-3xl);
@@ -1167,9 +1146,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* ----------------------------------------------------------
-   Modal
-   ---------------------------------------------------------- */
+/* modal */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1312,9 +1289,6 @@
   stroke: currentColor;
 }
 
-/* ----------------------------------------------------------
-   Footer
-   ---------------------------------------------------------- */
 .site-footer {
   background-color: var(--color-chocolate);
   color: rgba(255, 251, 240, 0.75);
@@ -1429,10 +1403,7 @@
 .footer__legal a:hover {
   color: var(--color-cream);
 }
-
-/* ----------------------------------------------------------
-   Form
-   ---------------------------------------------------------- */
+/* form */
 .contact-form {
   background-color: var(--color-cream);
   border-radius: var(--radius-xl);
@@ -1539,16 +1510,10 @@
   animation: subtlePulse 1.5s ease-in-out infinite;
 }
 
-/* ----------------------------------------------------------
-   Page top spacer (inner pages)
-   ---------------------------------------------------------- */
 .page-top-spacer {
   height: var(--nav-height);
 }
 
-/* ----------------------------------------------------------
-   Utility classes
-   ---------------------------------------------------------- */
 .u-mt-lg {
   margin-top: var(--space-lg);
 }

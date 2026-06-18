@@ -284,6 +284,9 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* ----------------------------------------------------------
+   Buttons
+   ---------------------------------------------------------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -295,7 +298,6 @@
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--color-cream);
   text-transform: uppercase;
   white-space: nowrap;
   transition:
@@ -315,6 +317,21 @@
 }
 
 .btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn--primary {
+  background-color: var(--color-amber);
+  color: var(--color-chocolate);
+}
+
+.btn--primary:hover {
+  background-color: #d97706;
+}
+
+.btn--outline {
   background-color: transparent;
   color: var(--color-cream);
   border: 2px solid rgba(255, 251, 240, 0.5);
@@ -351,6 +368,9 @@
   padding: 1rem;
 }
 
+/* ----------------------------------------------------------
+   Hero
+   ---------------------------------------------------------- */
 .hero {
   position: relative;
   min-height: 100svh;
@@ -473,6 +493,9 @@
   stroke: var(--color-amber);
 }
 
+/* ----------------------------------------------------------
+   Stats Bar
+   ---------------------------------------------------------- */
 .stats-bar {
   background-color: var(--color-chocolate);
   padding-block: var(--space-2xl);
@@ -501,6 +524,9 @@
   color: rgba(255, 251, 240, 0.7);
 }
 
+/* ----------------------------------------------------------
+   Story Section
+   ---------------------------------------------------------- */
 .story {
   display: grid;
   gap: var(--space-3xl);
@@ -613,6 +639,9 @@
   margin: 0;
 }
 
+/* ----------------------------------------------------------
+   Featured Cards (Home page)
+   ---------------------------------------------------------- */
 .featured-grid {
   display: grid;
   gap: var(--space-lg);
@@ -694,6 +723,9 @@
   display: block;
 }
 
+/* ----------------------------------------------------------
+   Location CTA Banner
+   ---------------------------------------------------------- */
 .location-cta {
   background: linear-gradient(
     135deg,
@@ -761,8 +793,6 @@
   font-size: 1.6rem;
   display: block;
   margin-bottom: var(--space-xs);
-  width: 32px;
-  filter: brightness(0) invert(1);
 }
 
 .location-cta__item-label {
@@ -779,6 +809,9 @@
   font-size: 1rem;
 }
 
+/* ----------------------------------------------------------
+   Testimonials
+   ---------------------------------------------------------- */
 .testimonial-grid {
   display: grid;
   gap: var(--space-xl);
@@ -852,6 +885,9 @@
   color: var(--color-text-muted);
 }
 
+/* ----------------------------------------------------------
+   Menu Page
+   ---------------------------------------------------------- */
 .menu-hero {
   padding-top: calc(var(--nav-height) + var(--space-3xl));
   padding-bottom: var(--space-3xl);
@@ -1124,6 +1160,9 @@
   margin-bottom: 0.5rem;
 }
 
+/* ----------------------------------------------------------
+   Modal
+   ---------------------------------------------------------- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1147,6 +1186,7 @@
 }
 
 .modal {
+  position: relative;
   background-color: var(--color-cream);
   border-radius: var(--radius-xl);
   max-width: 560px;
@@ -1265,6 +1305,9 @@
   stroke: currentColor;
 }
 
+/* ----------------------------------------------------------
+   Footer
+   ---------------------------------------------------------- */
 .site-footer {
   background-color: var(--color-chocolate);
   color: rgba(255, 251, 240, 0.75);
@@ -1380,6 +1423,9 @@
   color: var(--color-cream);
 }
 
+/* ----------------------------------------------------------
+   Form
+   ---------------------------------------------------------- */
 .contact-form {
   background-color: var(--color-cream);
   border-radius: var(--radius-xl);
@@ -1486,10 +1532,16 @@
   animation: subtlePulse 1.5s ease-in-out infinite;
 }
 
+/* ----------------------------------------------------------
+   Page top spacer (inner pages)
+   ---------------------------------------------------------- */
 .page-top-spacer {
   height: var(--nav-height);
 }
 
+/* ----------------------------------------------------------
+   Utility classes
+   ---------------------------------------------------------- */
 .u-mt-lg {
   margin-top: var(--space-lg);
 }

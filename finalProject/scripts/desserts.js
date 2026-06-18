@@ -1,22 +1,35 @@
 const DATA_URL = 'data/desserts.json';
 
+const overlay      = document.getElementById('dessert-modal');
+const modalImg     = document.getElementById('modal-img');
+const modalCat     = document.getElementById('modal-category');
+const modalTitle   = document.getElementById('modal-title');
+const modalDesc    = document.getElementById('modal-desc');
+const modalPortion = document.getElementById('modal-portion');
+const modalRating  = document.getElementById('modal-rating');
+const modalIngr    = document.getElementById('modal-ingredients');
+const modalReviews = document.getElementById('modal-reviews');
+const modalPrice   = document.getElementById('modal-price');
+const closeBtn     = document.getElementById('modal-close');
+const closeBtnAlt  = document.getElementById('modal-close-btn');
+
 export async function fetchDesserts() {
   try {
     const response = await fetch(DATA_URL);
 
     if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status} ${response.statusText}`);
+      throw new Error(`Error HTTP: ${response.status} ${response.statusText}`);
     }
 
     const data = await response.json();
 
     if (!Array.isArray(data)) {
-      throw new TypeError('Expected an array of desserts from JSON data');
+      throw new TypeError('Se esperaba un arreglo de postres del archivo JSON');
     }
 
     return data;
   } catch (error) {
-    console.error('[fetchDesserts] Failed to load dessert data:', error);
+    console.error('[fetchDesserts] Error al cargar los datos:', error);
     return [];
   }
 }
@@ -33,7 +46,7 @@ export function buildFeaturedCard(dessert) {
       role="listitem"
       data-id="${dessert.id}"
       tabindex="0"
-      aria-label="View details for ${dessert.name}"
+      aria-label="Ver detalles de ${dessert.name}"
     >
       <div class="featured-card__img-wrap">
         <img
@@ -65,7 +78,7 @@ export function buildMenuCard(dessert) {
     .join('');
 
   const unavailableHTML = !dessert.available
-    ? `<div class="menu-card__unavailable" aria-label="Currently unavailable">Currently Unavailable</div>`
+    ? `<div class="menu-card__unavailable" aria-label="No disponible actualmente">No Disponible</div>`
     : '';
 
   return `
@@ -75,7 +88,7 @@ export function buildMenuCard(dessert) {
       data-id="${dessert.id}"
       data-category="${dessert.category}"
       tabindex="${dessert.available ? '0' : '-1'}"
-      aria-label="${dessert.available ? `View details for ${dessert.name}` : `${dessert.name} — currently unavailable`}"
+      aria-label="${dessert.available ? `Ver detalles de ${dessert.name}` : `${dessert.name} — no disponible actualmente`}"
       ${!dessert.available ? 'aria-disabled="true"' : ''}
     >
       <div class="menu-card__img-wrap">
@@ -95,7 +108,7 @@ export function buildMenuCard(dessert) {
         <p class="menu-card__desc">${dessert.description}</p>
         <div class="menu-card__footer">
           <span class="menu-card__price">S/ ${dessert.price.toFixed(2)}</span>
-          <span class="menu-card__rating" aria-label="Rating: ${dessert.rating} out of 5 (${dessert.reviews} reviews)">
+          <span class="menu-card__rating" aria-label="Calificación: ${dessert.rating} de 5 (${dessert.reviews} reseñas)">
             ${dessert.rating} (${dessert.reviews})
           </span>
         </div>
@@ -105,39 +118,26 @@ export function buildMenuCard(dessert) {
 }
 
 export function openDessertModal(dessert) {
-  const overlay     = document.getElementById('dessert-modal');
-  const img         = document.getElementById('modal-img');
-  const category    = document.getElementById('modal-category');
-  const title       = document.getElementById('modal-title');
-  const desc        = document.getElementById('modal-desc');
-  const portion     = document.getElementById('modal-portion');
-  const rating      = document.getElementById('modal-rating');
-  const ingredients = document.getElementById('modal-ingredients');
-  const reviews     = document.getElementById('modal-reviews');
-  const price       = document.getElementById('modal-price');
-
   if (!overlay) return;
 
-  if (img) { img.src = dessert.image; img.alt = dessert.name; }
-  if (category) category.textContent = dessert.category;
-  if (title) title.textContent = dessert.name;
-  if (desc) desc.textContent = dessert.description;
-  if (portion) portion.textContent = dessert.portion;
-  if (rating) rating.textContent = `★ ${dessert.rating} / 5`;
-  if (ingredients) ingredients.textContent = dessert.ingredients.join(', ');
-  if (reviews) reviews.textContent = `${dessert.reviews} reviews`;
-  if (price) price.textContent = `S/ ${dessert.price.toFixed(2)}`;
+  if (modalImg)     { modalImg.src = dessert.image; modalImg.alt = dessert.name; }
+  if (modalCat)     modalCat.textContent     = dessert.category;
+  if (modalTitle)   modalTitle.textContent   = dessert.name;
+  if (modalDesc)    modalDesc.textContent    = dessert.description;
+  if (modalPortion) modalPortion.textContent = dessert.portion;
+  if (modalRating)  modalRating.textContent  = `★ ${dessert.rating} / 5`;
+  if (modalIngr)    modalIngr.textContent    = dessert.ingredients.join(', ');
+  if (modalReviews) modalReviews.textContent = `${dessert.reviews} reseñas`;
+  if (modalPrice)   modalPrice.textContent   = `S/ ${dessert.price.toFixed(2)}`;
 
   overlay.classList.add('is-open');
   overlay.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 
-  const closeBtn = document.getElementById('modal-close');
   closeBtn?.focus();
 }
 
 export function closeDessertModal() {
-  const overlay = document.getElementById('dessert-modal');
   if (!overlay) return;
 
   overlay.classList.remove('is-open');
@@ -146,10 +146,6 @@ export function closeDessertModal() {
 }
 
 export function initModal(onClose) {
-  const overlay  = document.getElementById('dessert-modal');
-  const closeBtn = document.getElementById('modal-close');
-  const closeBtnAlt = document.getElementById('modal-close-btn');
-
   function close() {
     closeDessertModal();
     onClose?.();

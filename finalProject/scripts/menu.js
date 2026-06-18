@@ -105,6 +105,8 @@ function applyHashFilter() {
 }
 
 async function init() {
+  initModal();
+
   allDesserts = await fetchDesserts();
 
   if (!allDesserts.length && menuGrid) {

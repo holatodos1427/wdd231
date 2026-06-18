@@ -79,7 +79,7 @@
     "ingredients": ["camote", "calabaza", "harina", "levadura", "maracuyá", "azúcar"],
     "tags": ["estacional", "tropical"],
     "available": true,
-    "image": "images/picarones-maracuya.JPG",
+    "image": "images/picarones-maracuya.jpg",
     "rating": 4.6,
     "reviews": 45
   },
@@ -144,7 +144,7 @@
     "name": "Buñuelos Navideños",
     "category": "buñuelos",
     "price": 15.00,
-    "description": "Una oferta especial navideña: buñuelos con sabor a especias de panettone, pasas y un ligero glasé de azúcar glass. Edición limitada durante la temporada navideña.",
+    "description": "Una oferta especial navideña: buñuelos con sabor a especias de panettone, pasas y un ligero glasé de azúcar glass. Edición limitada durante la temporada de navidad.",
     "portion": "6 units",
     "ingredients": ["harina", "huevos", "pasas", "canela", "nuez moscada", "cáscara de naranja", "azúcar glass"],
     "tags": ["estacional", "navideño", "limitado"],
@@ -177,7 +177,7 @@
     "ingredients": ["camote", "calabaza", "harina", "levadura", "anís", "almíbar de higos"],
     "tags": ["mini", "fiesta", "degustación"],
     "available": true,
-    "image": "images/picarones-mini.JPG",
+    "image": "images/picarones-mini.jpg",
     "rating": 4.7,
     "reviews": 56
   },

@@ -762,6 +762,7 @@
   display: block;
   margin-bottom: var(--space-xs);
   width: 32px;
+  filter: brightness(0) invert(1);
 }
 
 .location-cta__item-label {

@@ -1,0 +1,22 @@
+
+.menu-empty h3 {
+  margin-bottom: var(--space-sm);
+}
+
+.menu-empty p {
+  margin-inline: auto;
+}
+
+.menu-empty a {
+  color: var(--color-clay);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.menu-note__inner a {
+  color: var(--color-clay);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

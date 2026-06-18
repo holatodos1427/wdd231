@@ -1,11 +1,362 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gustitos Doña Elena — Auténticos picarones y buñuelos peruanos hechos a mano con tradición. Ordena postres frescos elaborados con camote, zapallo y miel de higos." />
+  <meta name="author" content="Gustitos Doña Elena" />
+  <meta property="og:title" content="Gustitos Doña Elena — Auténticos Postres Peruanos" />
+  <meta property="og:description" content="Picarones y buñuelos hechos a mano con amor, tradición y los mejores ingredientes peruanos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gustitosdonaelena.com/" />
+  <meta property="og:image" content="images/og-home.jpg" />
+  <title>Gustitos Doña Elena — Auténticos Postres Peruanos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Dancing+Script:wght@500;700&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/normalize.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/large.css" />
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 </head>
 <body>
-    
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="index.html" class="nav__logo" aria-label="Gustitos Doña Elena — Inicio">
+          <span class="nav__logo-name">
+            <img src="images/gustitos_logo.svg" alt="Gustitos Doña Elena" class="nav__logo-img" />
+          </span>
+          <span class="nav__logo-tagline">Sabores del Perú</span>
+        </a>
+        <button class="nav__toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir o cerrar el menú de navegación">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list" role="list">
+            <li><a href="index.html" class="nav__link" aria-current="page">Inicio</a></li>
+            <li><a href="about.html" class="nav__link">Nosotros</a></li>
+            <li><a href="menu.html" class="nav__link">Menú</a></li>
+            <li><a href="contact.html" class="nav__link">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Bienvenido a Gustitos Doña Elena">
+      <div class="hero__bg">
+        <img src="images/hero-bg.jpg" alt="" role="presentation" loading="eager" />
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero__content">
+          <span class="hero__eyebrow">Arequipa, Perú</span>
+          <h1 class="hero__title">
+            Tradición en cada<br />
+            <em>bocado dorado</em>
+          </h1>
+          <span class="hero__script">Picarones & Buñuelos</span>
+          <p class="hero__desc">
+            Hechos con camote, zapallo y generaciones de amor —
+            servidos con nuestra miel de higos tal como siempre los hizo Doña Elena.
+          </p>
+          <div class="hero__actions">
+            <a href="menu.html" class="btn btn--primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2" /></svg>
+              Ver Nuestro Menú
+            </a>
+            <a href="about.html" class="btn btn--outline">Nuestra Historia</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Bajar</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </div>
+    </section>
+
+    <section class="stats-bar" aria-label="Datos rápidos sobre Gustitos Doña Elena">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="reveal reveal--scale reveal-delay-1">
+            <span class="stat__num" data-target="12">0</span>
+            <span class="stat__label">Años de Tradición</span>
+          </div>
+          <div class="reveal reveal--scale reveal-delay-2">
+            <span class="stat__num" data-target="4000">0</span>
+            <span class="stat__label">Clientes Felices</span>
+          </div>
+          <div class="reveal reveal--scale reveal-delay-3">
+            <span class="stat__num" data-target="15">0</span>
+            <span class="stat__label">Platos en el Menú</span>
+          </div>
+          <div class="reveal reveal--scale reveal-delay-4">
+            <span class="stat__num" data-target="100">0</span>
+            <span class="stat__label">% Hecho a Mano</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="our-story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="story">
+          <div class="story__images reveal reveal--left">
+            <img
+              class="story__img-main"
+              src="images/tradicion-peruana.jpeg"
+              alt="Doña Elena dando forma a la masa de picarones con sus manos en su cocina"
+              loading="lazy"
+            />
+            <img
+              class="story__img-accent"
+              src="images/picarones.jpeg"
+              alt="Picarones dorados bañados en miel de higos sobre un plato de barro tradicional"
+              loading="lazy"
+            />
+            <div class="story__badge" aria-hidden="true">
+              <span class="story__badge-num">12</span>
+              <span class="story__badge-text">Años de<br/>tradición</span>
+            </div>
+          </div>
+
+          <div class="story__content reveal reveal--right">
+            <span class="section__eyebrow">Nuestra Historia</span>
+            <h2 id="story-heading">Nacida en una cocina, compartida con una comunidad</h2>
+            <p>
+              Doña Elena aprendió a hacer picarones de su abuela en las alturas de Arequipa,
+              donde la receta pasó de generación en generación sin jamás haber sido escrita —
+              solo manos enseñando a manos.
+            </p>
+            <p>
+              Hoy, cada hornada se sigue haciendo con el mismo cuidado: camote y zapallo
+              comprados en mercados locales, masa reposada toda la noche, frita a la temperatura
+              exacta y terminada con una miel de higos que hierve horas en la cocina.
+            </p>
+
+            <div class="story__values" role="list">
+              <div class="story__value" role="listitem">
+                <span class="story__value-icon" aria-hidden="true"><img src="images/sgv/ingredients-svgrepo-com.svg" alt="ingredientes locales"></span>
+                <div>
+                  <p class="story__value-title">Ingredientes Locales</p>
+                  <p class="story__value-text">Comprados en los mercados de Arequipa cada semana</p>
+                </div>
+              </div>
+              <div class="story__value" role="listitem">
+                <span class="story__value-icon" aria-hidden="true"><img src="images/sgv/hands-svgrepo-com.svg" alt="hecho a mano"></span>
+                <div>
+                  <p class="story__value-title">Siempre Hecho a Mano</p>
+                  <p class="story__value-text">Sin máquinas, sin atajos, sin compromisos</p>
+                </div>
+              </div>
+              <div class="story__value" role="listitem">
+                <span class="story__value-icon" aria-hidden="true"><img src="images/sgv/book-closed-svgrepo-com.svg" alt="receta familiar"></span>
+                <div>
+                  <p class="story__value-title">Receta Familiar</p>
+                  <p class="story__value-text">Cuatro generaciones de tradición peruana</p>
+                </div>
+              </div>
+              <div class="story__value" role="listitem">
+                <span class="story__value-icon" aria-hidden="true"><img src="images/sgv/love-svgrepo-com.svg" alt="hecho con amor"></span>
+                <div>
+                  <p class="story__value-title">Hecho con Amor</p>
+                  <p class="story__value-text">Porque la comida está hecha para sentirse, no solo para comerse</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn--ghost u-mt-xl">
+              Leer Nuestra Historia Completa
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="featured" aria-labelledby="featured-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Frescos Cada Día</span>
+          <h2 class="section__title" id="featured-heading">Postres Destacados</h2>
+          <p class="section__subtitle">
+            Nuestras creaciones más queridas, hechas esta mañana y listas para alegrar tu día.
+          </p>
+        </div>
+
+        <div class="featured-grid" id="featured-grid" role="list" aria-live="polite" aria-label="Postres destacados">
+          <div class="featured-skeleton" aria-hidden="true"></div>
+        </div>
+
+        <div class="u-text-center u-mt-2xl">
+          <a href="menu.html" class="btn btn--dark">
+            Ver Menú Completo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-cta" aria-labelledby="location-heading">
+      <div class="container">
+        <div class="location-cta__content reveal">
+          <span class="location-cta__eyebrow">Encuéntranos</span>
+          <h2 class="location-cta__title" id="location-heading">Nuestras Ubicaciones</h2>
+          <p class="location-cta__subtitle">
+            Nos instalamos cada fin de semana. Ven a encontrarnos y descubre por qué la gente siempre vuelve.
+          </p>
+
+          <div class="location-cta__grid">
+            <div class="location-cta__item reveal reveal-delay-1">
+              <span class="location-cta__item-icon" aria-hidden="true"><img src="images/sgv/location-svgrepo-com.svg" alt="ubicación"></span>
+              <span class="location-cta__item-label">Sábado</span>
+              <span class="location-cta__item-value">Mercado San Camilo</span>
+            </div>
+            <div class="location-cta__item reveal reveal-delay-2">
+              <span class="location-cta__item-icon" aria-hidden="true"><img src="images/sgv/location-svgrepo-com.svg" alt="ubicación"></span>
+              <span class="location-cta__item-label">Domingo</span>
+              <span class="location-cta__item-value">Plaza de Armas</span>
+            </div>
+            <div class="location-cta__item reveal reveal-delay-3">
+              <span class="location-cta__item-icon" aria-hidden="true"><img src="images/sgv/clock-svgrepo-com.svg" alt="horario"></span>
+              <span class="location-cta__item-label">Horario</span>
+              <span class="location-cta__item-value">8:00 AM - Hasta agotar stock</span>
+            </div>
+            <div class="location-cta__item reveal reveal-delay-4">
+              <span class="location-cta__item-icon" aria-hidden="true"><img src="images/sgv/box-svgrepo-com.svg" alt="pedidos"></span>
+              <span class="location-cta__item-label">Pedidos</span>
+              <span class="location-cta__item-value">WhatsApp e Instagram</span>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn--primary">
+            Contáctanos para Ordenar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Lo Que Dicen</span>
+          <h2 class="section__title" id="testimonials-heading">El amor de Arequipa</h2>
+        </div>
+        <div class="testimonial-grid" id="testimonial-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="footer__brand-name">Gustitos Doña Elena</span>
+          <p class="footer__brand-desc">
+            Auténticos picarones y buñuelos peruanos, hechos a mano con generaciones de amor
+            y los mejores ingredientes locales.
+          </p>
+          <div class="footer__social" aria-label="Redes sociales">
+            <a href="#" class="footer__social-link" aria-label="Síguenos en Instagram" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer__social-link" aria-label="Síguenos en Facebook" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://wa.me/51999999999" class="footer__social-link" aria-label="Escríbenos por WhatsApp" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__heading">Navegación</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html" class="footer__link">Inicio</a></li>
+            <li><a href="about.html" class="footer__link">Nosotros</a></li>
+            <li><a href="menu.html" class="footer__link">Menú</a></li>
+            <li><a href="contact.html" class="footer__link">Contacto</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Menú</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="menu.html#picarones" class="footer__link">Picarones</a></li>
+            <li><a href="menu.html#buñuelos" class="footer__link">Buñuelos</a></li>
+            <li><a href="menu.html#combos" class="footer__link">Combos</a></li>
+            <li><a href="menu.html#extras" class="footer__link">Extras</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__heading">Contacto</h3>
+          <ul class="footer__links" role="list">
+            <li><a href="tel:+51999999999" class="footer__link">+51 999 999 999</a></li>
+            <li><a href="mailto:hola@gustitosdonaelena.com" class="footer__link">hola@gustitosdonaelena.com</a></li>
+            <li><span class="footer__link">Arequipa, Perú</span></li>
+            <li><span class="footer__link">Sáb–Dom, 8 AM – 2 PM</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="footer-year"></span> Gustitos Doña Elena. Todos los derechos reservados.</p>
+        <nav class="footer__legal" aria-label="Enlaces legales">
+          <a href="attributions.html">Atribuciones</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="dessert-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal" id="modal-content">
+      <button class="modal__close" id="modal-close" aria-label="Cerrar ventana">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__img">
+        <img id="modal-img" src="" alt="" loading="lazy" />
+      </div>
+      <div class="modal__body">
+        <span class="modal__category" id="modal-category"></span>
+        <h2 class="modal__title" id="modal-title"></h2>
+        <p class="modal__desc" id="modal-desc"></p>
+        <div class="modal__meta">
+          <div class="modal__meta-item">
+            <label>Porción</label>
+            <span id="modal-portion"></span>
+          </div>
+          <div class="modal__meta-item">
+            <label>Calificación</label>
+            <span id="modal-rating"></span>
+          </div>
+          <div class="modal__meta-item">
+            <label>Ingredientes</label>
+            <span id="modal-ingredients"></span>
+          </div>
+          <div class="modal__meta-item">
+            <label>Reseñas</label>
+            <span id="modal-reviews"></span>
+          </div>
+        </div>
+        <span class="modal__price" id="modal-price"></span>
+        <div class="modal__actions">
+          <a href="contact.html" class="btn btn--primary">Ordenar Ahora</a>
+          <a href="menu.html" class="btn btn--ghost">Menú Completo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="scripts/main.js"></script>
+  <script type="module" src="scripts/home.js"></script>
 </body>
 </html>

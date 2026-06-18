@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Gustitos Doña Elena favicon">
+  <title>Gustitos Doña Elena</title>
+  <!-- Outer ring (picarón shape) -->
+  <circle cx="32" cy="32" r="30" fill="#F59E0B" />
+  <!-- Inner hole -->
+  <circle cx="32" cy="32" r="13" fill="#2D1A14" />
+  <!-- Decorative golden dots (texture) -->
+  <circle cx="32" cy="6" r="2.5" fill="#2D1A14" opacity="0.4"/>
+  <circle cx="32" cy="58" r="2.5" fill="#2D1A14" opacity="0.4"/>
+  <circle cx="6" cy="32" r="2.5" fill="#2D1A14" opacity="0.4"/>
+  <circle cx="58" cy="32" r="2.5" fill="#2D1A14" opacity="0.4"/>
+  <circle cx="13" cy="13" r="2" fill="#2D1A14" opacity="0.3"/>
+  <circle cx="51" cy="13" r="2" fill="#2D1A14" opacity="0.3"/>
+  <circle cx="13" cy="51" r="2" fill="#2D1A14" opacity="0.3"/>
+  <circle cx="51" cy="51" r="2" fill="#2D1A14" opacity="0.3"/>
+  <!-- Small inner letter G -->
+  <text x="32" y="37" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#F59E0B">G</text>
+</svg>

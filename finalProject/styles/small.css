@@ -1,0 +1,207 @@
+
+@media (max-width: 768px) {
+
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__menu {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-chocolate);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    z-index: 1050;
+  }
+
+  .nav__menu.is-open {
+    transform: translateX(0);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: var(--space-2xl);
+    text-align: center;
+  }
+
+  .nav__link {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding-inline: var(--space-lg);
+  }
+
+  .section {
+    padding-block: var(--space-3xl);
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .location-cta__grid {
+    gap: var(--space-xl);
+  }
+
+  .modal-overlay {
+    padding: var(--space-md);
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .schedule-card--special {
+    grid-column: 1 / -1;
+  }
+
+  .founder-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .founder__img-wrap {
+    max-width: 480px;
+    margin-inline: auto;
+  }
+
+  .founder__quote-card {
+    right: 0;
+    bottom: -1.5rem;
+  }
+
+  .menu-note__inner {
+    flex-direction: column;
+  }
+
+  .filter-bar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-bar__count {
+    margin-left: 0;
+  }
+
+}
+
+
+@media (max-width: 540px) {
+
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story__values {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .process-step::after {
+    display: none !important;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .modal__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .values-banner__inner {
+    flex-direction: column;
+    gap: var(--space-lg);
+    text-align: center;
+  }
+
+  .values-banner__divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .founder__quote-card {
+    position: static;
+    margin-top: var(--space-lg);
+    max-width: 100%;
+    animation: none;
+  }
+
+  .schedule-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .success-card {
+    padding: var(--space-xl);
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  :root {
+    --space-xl: 1.25rem;
+  }
+
+  .container {
+    padding-inline: var(--space-md);
+  }
+
+}

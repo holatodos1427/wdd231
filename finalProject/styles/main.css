@@ -790,9 +790,16 @@
 }
 
 .location-cta__item-icon {
-  font-size: 1.6rem;
   display: block;
-  margin-bottom: var(--space-xs);
+  margin: 0 auto var(--space-xs);
+  filter: brightness(0) invert(1);
+}
+
+.location-cta__item-icon img {
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .location-cta__item-label {

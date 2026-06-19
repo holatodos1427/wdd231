@@ -37,18 +37,18 @@ export async function fetchDesserts() {
 export function buildFeaturedCard(dessert) {
   const tagHTML = dessert.tags
     .filter((t) => ['popular', 'seasonal', 'new'].includes(t))
-    .map((t) => `<span class="featured-card__badge">${t}</span>`)
+    .map((t) => `<span class="featured-card-badge">${t}</span>`)
     .join('');
 
   return `
     <article
-      class="featured-card reveal reveal--scale"
+      class="featured-card reveal reveal-scale"
       role="listitem"
       data-id="${dessert.id}"
       tabindex="0"
       aria-label="Ver detalles de ${dessert.name}"
     >
-      <div class="featured-card__img-wrap">
+      <div class="featured-card-image-wrap">
         <img
           src="${dessert.image}"
           alt="${dessert.name} — ${dessert.description.slice(0, 80)}…"
@@ -58,10 +58,10 @@ export function buildFeaturedCard(dessert) {
         />
         ${tagHTML}
       </div>
-      <div class="featured-card__body">
-        <h3 class="featured-card__name">${dessert.name}</h3>
-        <p class="featured-card__desc">${dessert.description}</p>
-        <span class="featured-card__price">S/ ${dessert.price.toFixed(2)}</span>
+      <div class="featured-card-body">
+        <h3 class="featured-card-name">${dessert.name}</h3>
+        <p class="featured-card-description">${dessert.description}</p>
+        <span class="featured-card-price">S/ ${dessert.price.toFixed(2)}</span>
       </div>
     </article>
   `;
@@ -70,20 +70,20 @@ export function buildFeaturedCard(dessert) {
 export function buildMenuCard(dessert) {
   const tagHTML = dessert.tags
     .map((tag) => {
-      const cls = tag === 'popular' ? 'tag--popular'
-                : tag === 'seasonal' ? 'tag--seasonal'
+      const cls = tag === 'popular' ? 'tag-popular'
+                : tag === 'seasonal' ? 'tag-seasonal'
                 : '';
       return `<span class="tag ${cls}">${tag}</span>`;
     })
     .join('');
 
   const unavailableHTML = !dessert.available
-    ? `<div class="menu-card__unavailable" aria-label="No disponible actualmente">No Disponible</div>`
+    ? `<div class="menu-card-unavailable" aria-label="No disponible actualmente">No Disponible</div>`
     : '';
 
   return `
     <article
-      class="menu-card reveal reveal--scale"
+      class="menu-card reveal reveal-scale"
       role="listitem"
       data-id="${dessert.id}"
       data-category="${dessert.category}"
@@ -91,7 +91,7 @@ export function buildMenuCard(dessert) {
       aria-label="${dessert.available ? `Ver detalles de ${dessert.name}` : `${dessert.name} — no disponible actualmente`}"
       ${!dessert.available ? 'aria-disabled="true"' : ''}
     >
-      <div class="menu-card__img-wrap">
+      <div class="menu-card-image-wrap">
         <img
           src="${dessert.image}"
           alt="${dessert.name}"
@@ -99,16 +99,16 @@ export function buildMenuCard(dessert) {
           width="400"
           height="300"
         />
-        <div class="menu-card__tags" aria-hidden="true">${tagHTML}</div>
+        <div class="menu-card-tags" aria-hidden="true">${tagHTML}</div>
         ${unavailableHTML}
       </div>
-      <div class="menu-card__body">
-        <span class="menu-card__category">${dessert.category}</span>
-        <h3 class="menu-card__name">${dessert.name}</h3>
-        <p class="menu-card__desc">${dessert.description}</p>
-        <div class="menu-card__footer">
-          <span class="menu-card__price">S/ ${dessert.price.toFixed(2)}</span>
-          <span class="menu-card__rating" aria-label="Calificación: ${dessert.rating} de 5 (${dessert.reviews} reseñas)">
+      <div class="menu-card-body">
+        <span class="menu-card-category">${dessert.category}</span>
+        <h3 class="menu-card-name">${dessert.name}</h3>
+        <p class="menu-card-description">${dessert.description}</p>
+        <div class="menu-card-footer">
+          <span class="menu-card-price">S/ ${dessert.price.toFixed(2)}</span>
+          <span class="menu-card-rating" aria-label="Calificación: ${dessert.rating} de 5 (${dessert.reviews} reseñas)">
             ${dessert.rating} (${dessert.reviews})
           </span>
         </div>

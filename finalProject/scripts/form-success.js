@@ -50,11 +50,11 @@ function renderDetails() {
 
   detailsEl.innerHTML = `
     <div class="success-summary">
-      <h3 class="success-summary__title">Your submission summary</h3>
-      <dl class="success-summary__list">
-        ${name ? `<div class="success-summary__item"><dt>Name</dt><dd>${name}</dd></div>` : ''}
-        ${email ? `<div class="success-summary__item"><dt>Email</dt><dd>${email}</dd></div>` : ''}
-        ${inquiryType ? `<div class="success-summary__item"><dt>Inquiry</dt><dd>${getInquiryLabel(inquiryType)}</dd></div>` : ''}
+      <h3 class="success-summary-title">Your submission summary</h3>
+      <dl class="success-summary-list">
+        ${name ? `<div class="success-summary-item"><dt>Name</dt><dd>${name}</dd></div>` : ''}
+        ${email ? `<div class="success-summary-item"><dt>Email</dt><dd>${email}</dd></div>` : ''}
+        ${inquiryType ? `<div class="success-summary-item"><dt>Inquiry</dt><dd>${getInquiryLabel(inquiryType)}</dd></div>` : ''}
       </dl>
     </div>
   `;

@@ -54,7 +54,7 @@ function handleInquiryChange() {
 inquirySelect?.addEventListener('change', handleInquiryChange);
 
 function validateField(input, errorId) {
-  const group = input?.closest('.form__group');
+  const group = input?.closest('.form-group');
   const errorEl = document.getElementById(errorId);
   if (!input || !group) return true;
 
@@ -90,7 +90,7 @@ form?.addEventListener('submit', (e) => {
 
   if (!allValid) {
     e.preventDefault();
-    const firstError = form.querySelector('.form__group.has-error input, .form__group.has-error select, .form__group.has-error textarea');
+    const firstError = form.querySelector('.form-group.has-error input, .form-group.has-error select, .form-group.has-error textarea');
     firstError?.focus();
     return;
   }

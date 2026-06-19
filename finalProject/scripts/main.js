@@ -3,7 +3,7 @@ const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const footerYear = document.getElementById('footer-year');
 const revealEls = document.querySelectorAll('.reveal');
-const statNums = document.querySelectorAll('.stat__num[data-target]');
+const statNums = document.querySelectorAll('.stat-number[data-target]');
 
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
@@ -41,7 +41,7 @@ navToggle?.addEventListener('click', () => {
   }
 });
 
-navMenu?.querySelectorAll('.nav__link').forEach((link) => {
+navMenu?.querySelectorAll('.nav-link').forEach((link) => {
   link.addEventListener('click', closeNav);
 });
 

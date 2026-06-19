@@ -1,11 +1,11 @@
 
 @media (max-width: 768px) {
 
-  .nav__toggle {
+  .nav-toggle {
     display: flex;
   }
 
-  .nav__menu {
+  .nav-menu {
     position: fixed;
     inset: 0;
     background-color: var(--color-chocolate);
@@ -19,17 +19,17 @@
     z-index: 1050;
   }
 
-  .nav__menu.is-open {
+  .nav-menu.is-open {
     transform: translateX(0);
   }
 
-  .nav__list {
+  .nav-list {
     flex-direction: column;
     gap: var(--space-2xl);
     text-align: center;
   }
 
-  .nav__link {
+  .nav-link {
     font-size: 1.5rem;
   }
 
@@ -61,11 +61,11 @@
     grid-template-columns: 1fr;
   }
 
-  .footer__grid {
+  .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .location-cta__grid {
+  .location-cta-grid {
     gap: var(--space-xl);
   }
 
@@ -77,7 +77,7 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .schedule-card--special {
+  .schedule-card-special {
     grid-column: 1 / -1;
   }
 
@@ -85,26 +85,26 @@
     grid-template-columns: 1fr;
   }
 
-  .founder__img-wrap {
+  .founder-image-wrap {
     max-width: 480px;
     margin-inline: auto;
   }
 
-  .founder__quote-card {
+  .founder-quote-card {
     right: 0;
     bottom: -1.5rem;
   }
 
-  .menu-note__inner {
+  .menu-note-inner {
     flex-direction: column;
   }
 
-  .filter-bar__inner {
+  .filter-bar-inner {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .filter-bar__count {
+  .filter-bar-count {
     margin-left: 0;
   }
 
@@ -133,20 +133,20 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .footer__grid {
+  .footer-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer__bottom {
+  .footer-bottom {
     flex-direction: column;
     text-align: center;
   }
 
-  .story__values {
+  .story-values {
     grid-template-columns: 1fr;
   }
 
-  .hero__actions {
+  .hero-actions {
     flex-direction: column;
   }
 
@@ -154,26 +154,26 @@
     display: none !important;
   }
 
-  .form__row {
+  .form-row {
     grid-template-columns: 1fr;
   }
 
-  .modal__meta {
+  .modal-meta {
     grid-template-columns: 1fr;
   }
 
-  .values-banner__inner {
+  .values-banner-inner {
     flex-direction: column;
     gap: var(--space-lg);
     text-align: center;
   }
 
-  .values-banner__divider {
+  .values-banner-divider {
     width: 60px;
     height: 1px;
   }
 
-  .founder__quote-card {
+  .founder-quote-card {
     position: static;
     margin-top: var(--space-lg);
     max-width: 100%;

@@ -66,14 +66,14 @@ header::before {
   pointer-events: none;
 }
 
-header .logo-img {
+header .logo-image {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .logo-img .logo {
+header .logo-image .logo {
   height: clamp(3rem, 10vw, 6rem);
   width: auto;
   display: block;
@@ -130,7 +130,7 @@ main {
   gap:           .6rem;
 }
 
-.card h2 .num {
+.card h2 .number {
   background:  var(--color-primary);
   color:       #FFF8E1;
   font-family: var(--font-body);
@@ -262,11 +262,11 @@ main {
   }
 }
 
-.wf-wrapper {
+.wireframe-wrapper {
   text-align: center;
 }
 
-.wf-wrapper h3 {
+.wireframe-wrapper h3 {
   font-family:    var(--font-body);
   font-weight:    700;
   font-size:      .8rem;
@@ -276,7 +276,7 @@ main {
   margin-bottom:  .6rem;
 }
 
-.wf-wrapper svg {
+.wireframe-wrapper svg {
   border:        2px solid var(--color-gold);
   border-radius: var(--radius);
   background:    #fff;
@@ -347,16 +347,16 @@ footer {
   margin-top: .5rem;
 }
 
-.type-specimen--spaced {
+.type-specimen-spaced {
   margin-top: .75rem;
 }
 
-.wireframes--single {
+.wireframes-single {
   grid-template-columns: 1fr;
   margin-top: 1rem;
 }
 
-.wf-image {
+.wireframe-image {
   width: 100%;
   border-radius: var(--radius);
   border: 2px solid var(--color-gold);

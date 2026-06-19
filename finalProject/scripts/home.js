@@ -40,13 +40,13 @@ function renderTestimonials() {
 
     return `
       <div class="testimonial-card reveal">
-        <div class="testimonial-card__stars" aria-label="Rating: ${t.stars} out of 5">${stars}</div>
-        <p class="testimonial-card__text">${t.text}</p>
-        <div class="testimonial-card__author">
-          <div class="testimonial-card__avatar" aria-hidden="true">${initial}</div>
+        <div class="testimonial-card-stars" aria-label="Rating: ${t.stars} out of 5">${stars}</div>
+        <p class="testimonial-card-text">${t.text}</p>
+        <div class="testimonial-card-author">
+          <div class="testimonial-card-avatar" aria-hidden="true">${initial}</div>
           <div>
-            <span class="testimonial-card__name">${t.name}</span>
-            <span class="testimonial-card__location">${t.location}</span>
+            <span class="testimonial-card-name">${t.name}</span>
+            <span class="testimonial-card-location">${t.location}</span>
           </div>
         </div>
       </div>

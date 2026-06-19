@@ -1,18 +1,18 @@
 
 @media (min-width: 1024px) {
 
-  .nav__toggle {
+  .nav-toggle {
     display: none;
   }
 
-  .nav__menu {
+  .nav-menu {
     position: static;
     background-color: transparent;
     display: block;
     transform: none;
   }
 
-  .nav__list {
+  .nav-list {
     flex-direction: row;
     gap: var(--space-xl);
   }
@@ -30,7 +30,7 @@
     gap: var(--space-3xl);
   }
 
-  .footer__grid {
+  .footer-grid {
     grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 
@@ -63,7 +63,7 @@
     gap: var(--space-3xl);
   }
 
-  .story__images {
+  .story-images {
     height: 480px;
   }
 

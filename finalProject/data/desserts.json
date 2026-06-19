@@ -79,7 +79,7 @@
     "ingredients": ["camote", "calabaza", "harina", "levadura", "maracuyá", "azúcar"],
     "tags": ["estacional", "tropical"],
     "available": true,
-    "image": "images/picarones-maracuya.jpg",
+    "image": "images/picarones-maracuya.jpeg",
     "rating": 4.6,
     "reviews": 45
   },
@@ -177,7 +177,7 @@
     "ingredients": ["camote", "calabaza", "harina", "levadura", "anís", "almíbar de higos"],
     "tags": ["mini", "fiesta", "degustación"],
     "available": true,
-    "image": "images/picarones-mini.jpg",
+    "image": "images/picarones-mini.jpeg",
     "rating": 4.7,
     "reviews": 56
   },
